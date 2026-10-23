@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ker Avel · Domaine</title>
+<meta name="description" content="Ker Avel, demeure de caractère en Bretagne : parc, cinq chambres, vue sur la baie. Séjours en famille et entre amis, réservation en direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;1,200;1,300&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VacationRental","name":"Ker Avel","description":"Demeure de caractère avec parc, Bretagne","address":{"@type":"PostalAddress","addressLocality":"Saint-Coulomb","addressRegion":"Bretagne","addressCountry":"FR"},"containsPlace":{"@type":"Accommodation","numberOfBedrooms":5,"occupancy":{"@type":"QuantitativeValue","value":10}}}
+</script>
+<style>
+:root{
+  --nuit:#1a171b; --nuit2:#252126; --or:#bd9e56; --or-clair:#d6bd84; --lin:#e8e3dc; --blanc:#ffffff; --encre:#1a171b;
+  --display:"Caladea", "Cambria", Georgia, serif;
+  --body:"Barlow", "DIN Alternate", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--blanc);color:var(--encre);font-family:var(--body);font-size:17px;line-height:1.75;margin:0;font-weight:300}
+.gut{padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+.tag{position:fixed;z-index:30;left:max(12px, env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--or);color:var(--nuit);font-size:12px;letter-spacing:.08em;padding:6px 12px;font-weight:500}
+.ph{position:relative;overflow:hidden;margin:0;max-width:100%}
+.ph figcaption{position:absolute;left:14px;bottom:12px;color:rgba(255,255,255,.88);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.5);z-index:1}
+.manor{background:radial-gradient(ellipse at 70% 18%,#ffe9c2 0%,transparent 28%),linear-gradient(180deg,#8fa6ae 0%,#d6d9cf 40%,#8e8574 41%,#5e584b 58%,#3f5a3a 59%,#1f301f 100%)}
+.park{background:radial-gradient(ellipse at 30% 20%,#efe9cf 0%,transparent 40%),linear-gradient(180deg,#a9bf96 0%,#5d7a47 50%,#24361f 100%)}
+.salon{background:radial-gradient(ellipse at 70% 30%,#f7e6c4 0%,transparent 45%),linear-gradient(135deg,#b99a6c 0%,#7a5d3d 55%,#2e2218 100%)}
+.room{background:radial-gradient(ellipse at 30% 25%,#fbefd8 0%,transparent 45%),linear-gradient(170deg,#c9b38f 0%,#7f6648 55%,#2c2219 100%)}
+.room2{background:radial-gradient(ellipse at 60% 30%,#dfe7ea 0%,transparent 40%),linear-gradient(190deg,#9fb3b3 0%,#4f6766 55%,#1c2726 100%)}
+.room3{background:radial-gradient(ellipse at 50% 35%,#f1dcc0 0%,transparent 40%),linear-gradient(180deg,#a88f74 0%,#5d4b3b 55%,#211915 100%)}
+.room4{background:radial-gradient(ellipse at 70% 30%,#f6f0e4 0%,transparent 45%),linear-gradient(160deg,#cfc5b4 0%,#8d8270 55%,#3a332a 100%)}
+.room5{background:radial-gradient(ellipse at 30% 30%,#e8eef0 0%,transparent 45%),linear-gradient(200deg,#b6c4c8 0%,#6f8389 55%,#26302f 100%)}
+.bay{background:radial-gradient(ellipse at 80% 20%,#fff2d8 0%,transparent 30%),linear-gradient(180deg,#b8cbcf 0%,#e6e9e4 42%,#6f97a0 43%,#2f5966 100%)}
+.table{background:radial-gradient(ellipse at 50% 60%,#f0d9a8 0%,transparent 35%),linear-gradient(180deg,#3a3227 0%,#141310 100%)}
+
+.top{position:absolute;inset:0 0 auto;z-index:10;color:var(--blanc)}
+.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:22px}
+.top nav{display:flex;gap:24px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
+.top nav.r{justify-content:flex-end;align-items:center}
+.top a{color:inherit;text-decoration:none}
+.top a:hover,.top a:focus-visible{color:var(--or-clair)}
+.logo{text-align:center;color:var(--blanc);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px}
+.logo svg{width:42px;height:34px}
+.logo span{font-family:var(--display);font-size:30px;letter-spacing:.12em;text-transform:uppercase;line-height:1}
+.logo small{font-size:9px;letter-spacing:.42em;text-transform:uppercase}
+.gold{background:var(--or);color:var(--blanc)!important;padding:10px 22px;font-weight:500;letter-spacing:.18em}
+.gold:hover,.gold:focus-visible{background:var(--or-clair)}
+a:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;line-height:1.1}
+.sub{font-style:italic;font-weight:200;font-size:19px;letter-spacing:.02em;margin:10px 0 0}
+.more{display:inline-flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:inherit;text-decoration:none;margin-top:30px}
+.more::after{content:"";width:7px;height:7px;border:1px solid currentColor;border-radius:50%}
+
+.hero{height:min(100vh,940px);min-height:540px;display:flex;align-items:flex-end;justify-content:center;color:var(--blanc);text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,27,.45) 0%,transparent 28%,transparent 60%,rgba(26,23,27,.5) 100%)}
+.hero .in{position:relative;padding-block:0 9vh}
+.hero h1{font-size:clamp(42px,6vw,82px)}
+.hero .sub{font-size:clamp(18px,1.8vw,23px)}
+
+.lin-band{background:var(--lin);height:70px;position:relative}
+.lin-band::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--or)}
+
+.intro{text-align:center;padding-block:100px 110px}
+.intro h2{font-size:clamp(34px,3.6vw,48px);color:var(--or)}
+.intro p{max-width:62ch;margin:0 auto 1em;text-align:left}
+.intro .sub{margin-bottom:34px}
+.intro p.lead{text-align:center}
+
+.dark{background:var(--nuit);color:var(--lin);padding-block:110px;text-align:center}
+.dark h2{font-size:clamp(34px,3.6vw,48px);color:var(--or)}
+.dark .lead{max-width:62ch;margin:24px auto 64px;font-size:16px}
+.portraits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:center}
+.card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;color:var(--blanc);text-decoration:none;min-height:min(74vh,700px);padding-bottom:42px;overflow:hidden}
+.card.tall{min-height:min(82vh,780px)}
+.card > .ph{position:absolute;inset:0;transition:transform .9s ease}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,10,.62) 0%,transparent 45%)}
+.card .lbl{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.card .k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:400}
+.card h3{font-size:clamp(30px,2.6vw,40px);margin-top:4px}
+.card .more{margin-top:10px}
+.card:hover > .ph,.card:focus-visible > .ph{transform:scale(1.04)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.duo .card{min-height:min(62vh,580px)}
+.dark .note{margin:60px auto 0;font-size:14px;letter-spacing:.06em}
+
+.full{position:relative;min-height:min(96vh,900px);display:flex;align-items:center;color:var(--blanc)}
+.full > .ph{position:absolute;inset:0}
+.full::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,23,27,.7) 0%,rgba(26,23,27,.2) 55%,transparent 100%);z-index:1}
+.full .wrap{position:relative;z-index:2;width:100%}
+.full .in{max-width:500px}
+.full h2{font-size:clamp(36px,4vw,56px)}
+.full p{margin:24px 0 0}
+
+.disc{padding-block:110px;text-align:center}
+.disc h2{font-size:clamp(34px,3.6vw,48px);color:var(--or)}
+.panels{display:flex;height:min(64vh,560px);margin-top:56px;gap:2px}
+.panel{flex:1 1 0;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;background:var(--lin);color:var(--encre);transition:flex-grow .6s ease;overflow:hidden;min-width:0;border:0;font:inherit;cursor:pointer;padding:0 8px}
+.panel > .ph{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.panel svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.2;position:relative}
+.panel .t{position:relative;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;line-height:1.5}
+.panel .d{position:relative;display:none;max-width:30ch;font-size:16px;line-height:1.5}
+.panel.on{flex-grow:4;color:var(--blanc)}
+.panel.on > .ph{opacity:1}
+.panel.on::after{content:"";position:absolute;inset:0;background:rgba(26,23,27,.35)}
+.panel.on > *{z-index:1}
+.panel.on .d{display:block}
+.panel:focus-visible{outline:2px solid var(--or);outline-offset:-4px}
+
+.dispo{background:var(--lin);padding-block:110px;--cal-fg:var(--encre);--cal-line:#cbbfa9;--cal-free:var(--blanc);--cal-busy:#cfc4b0;--cal-busyfg:#6e604a;--cal-sel:var(--nuit);--cal-selsoft:#d8c9a4;--cal-selfg:var(--or-clair)}
+.dispo-grid{display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start}
+.dispo-grid > *{min-width:0}
+.dispo h2{font-size:clamp(32px,3.4vw,46px);color:var(--or)}
+.dispo-txt p{margin:24px 0 0}
+.tarifs{list-style:none;padding:0;margin:26px 0 0;font-size:15px}
+.tarifs li{border-top:1px solid var(--or);padding:12px 0;font-weight:500}
+.tarifs span{display:block;font-weight:300;font-style:italic}
+.dispo .cal-title{font-family:var(--display);font-weight:400;color:var(--or)}
+[data-calendrier]{position:relative;font-variant-numeric:tabular-nums}
+.cal-head{position:absolute;right:0;top:-4px;display:flex;gap:6px}
+.cal-nav{width:36px;height:36px;border:1px solid var(--cal-line);background:transparent;color:var(--cal-fg);font-size:20px;line-height:1;cursor:pointer}
+.cal-nav:hover,.cal-nav:focus-visible{border-color:var(--cal-sel)}
+.cal-months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.cal-title{font-size:22px;text-transform:capitalize;margin:0 0 14px;min-height:36px;display:flex;align-items:center}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal-dow{font-size:11px;letter-spacing:.12em;text-align:center;opacity:.7;padding-bottom:4px}
+.cal-day{aspect-ratio:1;border:0;background:var(--cal-free);color:var(--cal-fg);font:inherit;font-size:14px;cursor:pointer;max-width:100%}
+.cal-day:hover:not([disabled]),.cal-day:focus-visible{outline:2px solid var(--cal-sel);outline-offset:-2px}
+.cal-day.busy{background:var(--cal-busy);color:var(--cal-busyfg);text-decoration:line-through;cursor:not-allowed}
+.cal-day.past{background:transparent;opacity:.35;cursor:default}
+.cal-day.sel{background:var(--cal-selsoft);color:var(--cal-fg)}
+.cal-day.sel.edge{background:var(--cal-sel);color:var(--cal-selfg)}
+.cal-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px;margin-top:22px;font-size:14px}
+.cal-sum{margin:0;flex:1 1 280px;font-weight:500}
+.cal-legend{display:flex;gap:16px;flex-wrap:wrap}
+.cal-legend span{display:flex;align-items:center;gap:6px}
+.lg{display:inline-block;width:14px;height:14px}
+.lg.free{background:var(--cal-free);outline:1px solid var(--cal-line)}.lg.busy{background:var(--cal-busy)}.lg.sel{background:var(--cal-sel)}
+.cal-src{margin:0;flex-basis:100%;font-size:12px;opacity:.75}
+@media (max-width:700px){.cal-months{grid-template-columns:1fr;gap:28px}}
+
+.book{position:relative;min-height:min(80vh,720px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--blanc)}
+.book > .ph{position:absolute;inset:0}
+.book::before{content:"";position:absolute;inset:0;background:rgba(26,23,27,.55);z-index:1}
+.book .in{position:relative;z-index:2;max-width:560px;padding-block:90px}
+.book h2{font-size:clamp(38px,4.4vw,60px)}
+.book p{margin:22px 0 32px}
+.book .gold{display:inline-block;text-decoration:none;font-size:12px;text-transform:uppercase}
+
+footer{background:var(--nuit);color:var(--lin);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-block:50px}
+footer b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--or);letter-spacing:.1em;text-transform:uppercase;display:block}
+@media (max-width:900px){
+  .top .wrap{grid-template-columns:1fr auto}
+  .top nav.l{display:none}
+  .top nav.r a:not(.gold){display:none}
+  .logo{align-items:flex-start}
+  .logo svg{display:none}
+  .logo span{font-size:22px}
+  .portraits,.duo{grid-template-columns:1fr}
+  .card,.card.tall,.duo .card{min-height:72vh}
+  .panels{flex-direction:column;height:auto}
+  .panel{min-height:90px;flex:none}
+  .panel.on{min-height:360px}
+  .dispo-grid{grid-template-columns:1fr;gap:36px}
+  .full::before{background:linear-gradient(0deg,rgba(26,23,27,.75) 0%,rgba(26,23,27,.2) 70%)}
+  .full{align-items:flex-end}
+  .full .in{padding-bottom:60px}
+}
+@media (prefers-reduced-motion:reduce){.card > .ph,.panel,.panel > .ph{transition:none}}
+</style>
+</head>
+<body>
+<a class="tag" href="../" style="text-decoration:none">← Les trois pistes</a>
+
+<header class="top gut">
+  <div class="wrap">
+    <nav class="l" aria-label="Navigation principale"><a href="#demeure">La demeure</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a></nav>
+    <a class="logo" href="#">
+      <svg viewBox="0 0 42 34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 33h36M7 33V15L21 4l14 11v18M16 33v-9h10v9M11 18h4v4h-4zM27 18h4v4h-4zM21 4V1"/></svg>
+      <span>Ker Avel</span><small>Demeure · Bretagne</small>
+    </a>
+    <nav class="r" aria-label="Réservation"><a href="#dispos">Disponibilités</a><a class="gold" href="#reserver">Réserver</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero ph manor gut" aria-label="Accueil" style="background:url(../img/manoir.jpg) center/cover">
+    <div class="in">
+      <h1>Une demeure bretonne face à la baie</h1>
+      <p class="sub">Le voyage commence au bout de l'allée</p>
+    </div>
+  </section>
+  <div class="lin-band" aria-hidden="true"></div>
+
+  <section id="demeure" class="intro gut">
+    <div class="wrap">
+      <h2>La demeure de Ker Avel</h2>
+      <p class="sub">Granit, ardoise et cent ans d'histoire</p>
+      <p>Bâtie en 1912 pour un armateur malouin, la maison a gardé ses parquets de chêne, ses cheminées et ses grandes fenêtres à petits carreaux. Nous l'avons restaurée pièce par pièce, avec des artisans de la région.</p>
+      <p>Autour, un parc d'un hectare réunit pins maritimes, hortensias et une pelouse où l'on dresse la table les soirs d'été. La plage est à cinq minutes à pied par le sentier.</p>
+      <a class="more" href="#chambres">Découvrir les chambres</a>
+    </div>
+  </section>
+
+  <section id="chambres" class="dark gut" aria-labelledby="t-ch">
+    <div class="wrap">
+      <h2 id="t-ch">Les chambres</h2>
+      <p class="sub">Cinq chambres, chacune son histoire</p>
+      <p class="lead">Chaque chambre a sa salle de bain, son linge de lin lavé et une vue sur le parc ou sur la baie. La maison accueille jusqu'à dix personnes.</p>
+      <div class="portraits">
+        <a class="card" href="#chambres"><figure class="ph room" style="background:url(../img/chambre-soleil.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 28 m²</span><h3>L'Armateur</h3><span class="more">Découvrir</span></span></a>
+        <a class="card tall" href="#chambres"><figure class="ph room2" style="background:url(../img/chambre-fenetres.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 24 m²</span><h3>La Capitainerie</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="#chambres"><figure class="ph room3" style="background:url(../img/chambre-lucarne.jpg) center/cover"></figure><span class="lbl"><span class="k">Rez-de-jardin · 22 m²</span><h3>Les Hortensias</h3><span class="more">Découvrir</span></span></a>
+      </div>
+      <div class="duo">
+        <a class="card" href="#chambres"><figure class="ph room4" style="background:url(../img/chambre-sombre.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue parc · 18 m²</span><h3>La Lingerie</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="#chambres"><figure class="ph room5" style="background:url(../img/chambre-claire.jpg) center/cover"></figure><span class="lbl"><span class="k">Quatre lits · 26 m²</span><h3>Les Mousses</h3><span class="more">Découvrir</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="full gut" aria-labelledby="t-parc">
+    <figure class="ph park" style="background:url(../img/longere.jpg) center/cover"></figure>
+    <div class="wrap"><div class="in">
+      <h2 id="t-parc">Le parc</h2>
+      <p class="sub">Un hectare entre les pins et la mer</p>
+      <p>Les hortensias bordent l'allée, la pelouse descend vers la baie. On y prend le petit-déjeuner au soleil du matin, on y dîne aux lanternes en août.</p>
+      <a class="more" href="#alentours">Les alentours</a>
+    </div></div>
+  </section>
+
+  <section id="alentours" class="disc gut" aria-labelledby="t-disc">
+    <div class="wrap">
+      <h2 id="t-disc">À découvrir également</h2>
+      <p class="sub">Ker Avel, entre terre et mer</p>
+      <div class="panels" role="list">
+        <button type="button" class="panel on" role="listitem"><figure class="ph bay" style="background:url(../img/piscine-mer.jpg) center/cover"></figure><svg viewBox="0 0 34 34"><path d="M2 22c4-3 6-3 10 0s6 3 10 0 6-3 10 0M2 28c4-3 6-3 10 0s6 3 10 0 6-3 10 0M24 6a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg><span class="t">Les grandes marées</span><span class="d">Pêche à pied et traversée vers l'île du Guesclin, à 5 minutes.</span></button>
+        <button type="button" class="panel" role="listitem"><figure class="ph park" style="background:url(../img/landes.jpg) center/cover"></figure><svg viewBox="0 0 34 34"><path d="M5 30c6-10 10-16 24-24M9 30l2-6M15 25l3-5M21 18l3-4"/></svg><span class="t">Le sentier GR34</span><span class="d">Le sentier des douaniers passe au pied du parc.</span></button>
+        <button type="button" class="panel" role="listitem"><figure class="ph bay" style="background:url(../img/voilier.jpg) center/cover"></figure><svg viewBox="0 0 34 34"><path d="M17 3v22M17 5l10 18H17M17 9 9 23h8M4 27h26l-3 4H7z"/></svg><span class="t">Voile et paddle</span><span class="d">Location à la cale de Saint-Coulomb, à 800 mètres.</span></button>
+        <button type="button" class="panel" role="listitem"><figure class="ph table" style="background:url(../img/huitres-table.jpg) center/cover"></figure><svg viewBox="0 0 34 34"><path d="M6 14c0-5 22-5 22 0 0 9-5 13-11 13S6 23 6 14zM6 14h22M12 31h10"/></svg><span class="t">Les huîtres de Cancale</span><span class="d">Le marché aux huîtres sur le port, à 12 minutes.</span></button>
+        <button type="button" class="panel" role="listitem"><figure class="ph manor" style="background:url(../img/saint-malo.jpg) center/cover"></figure><svg viewBox="0 0 34 34"><path d="M4 31V13l5-3 5 3v18M14 31V9l6-5 6 5v22M26 31V15l4-2v18M2 31h30"/></svg><span class="t">Saint-Malo</span><span class="d">Les remparts et la cité corsaire à 15 minutes.</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="dispos" class="dispo gut" aria-labelledby="t-dispo">
+    <div class="wrap dispo-grid">
+      <div class="dispo-txt">
+        <h2 id="t-dispo">Disponibilités</h2>
+        <p class="sub">Le calendrier de la maison</p>
+        <p>Nos réservations Airbnb s'y reportent automatiquement. Choisissez une arrivée puis un départ pour vérifier vos dates.</p>
+        <ul class="tarifs">
+          <li>Juillet et août <span>à la semaine, du samedi au samedi</span></li>
+          <li>Printemps, automne <span>3 nuits minimum</span></li>
+          <li>Hiver <span>week-ends de 2 nuits</span></li>
+        </ul>
+      </div>
+      <div data-calendrier></div>
+    </div>
+  </section>
+
+  <section id="reserver" class="book gut">
+    <figure class="ph bay" style="background:url(../img/saint-malo-couchant.jpg) center/cover"></figure>
+    <div class="in">
+      <h2>Séjourner à Ker Avel</h2>
+      <p class="sub">À la semaine en été, en week-end le reste de l'année</p>
+      <p>Nous répondons à chaque demande sous 24 heures.</p>
+      <a class="gold" href="#dispos">Réserver en direct</a>
+    </div>
+  </section>
+</main>
+
+<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga · 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>
+
+<script>
+document.querySelectorAll(".panel").forEach((p,_,all)=>{
+  const open=()=>all.forEach(x=>x.classList.toggle("on",x===p));
+  p.addEventListener("mouseenter",open);p.addEventListener("focus",open);p.addEventListener("click",open);
+});</script>
+<script>
+(function(){
+  const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  const JOURS=["L","M","M","J","V","S","D"];
+  const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const fmt=d=>d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"long"});
+  const today=new Date();today.setHours(0,0,0,0);
+  const add=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+  const booked=[[5,12],[19,23],[33,40],[47,54],[61,64],[75,89]].map(([a,b])=>[add(today,a),add(today,b)]);
+  const isBooked=d=>booked.some(([a,b])=>d>=a&&d<b);
+
+  document.querySelectorAll("[data-calendrier]").forEach(root=>{
+    let offset=0,arr=null,dep=null;
+    root.innerHTML=`<div class="cal-head"><button type="button" class="cal-nav" data-d="-1" aria-label="Mois précédents">‹</button><button type="button" class="cal-nav" data-d="1" aria-label="Mois suivants">›</button></div><div class="cal-months"></div><div class="cal-foot"><p class="cal-sum" aria-live="polite">Choisissez une date d'arrivée.</p><div class="cal-legend"><span><i class="lg free"></i>Libre</span><span><i class="lg busy"></i>Réservé</span><span><i class="lg sel"></i>Votre séjour</span></div><p class="cal-src">Synchronisé avec l'annonce Airbnb · dates d'exemple</p></div>`;
+    const months=root.querySelector(".cal-months"),sum=root.querySelector(".cal-sum");
+    root.querySelectorAll(".cal-nav").forEach(b=>b.addEventListener("click",()=>{offset=Math.max(0,offset+ +b.dataset.d);draw()}));
+    function rangeFree(a,b){for(let d=new Date(a);d<b;d=add(d,1))if(isBooked(d))return false;return true}
+    function draw(){
+      months.innerHTML="";
+      for(let m=0;m<2;m++){
+        const first=new Date(today.getFullYear(),today.getMonth()+offset+m,1);
+        const box=document.createElement("div");box.className="cal-month";
+        let h=`<h3 class="cal-title">${MOIS[first.getMonth()]} ${first.getFullYear()}</h3><div class="cal-grid">`+JOURS.map(j=>`<span class="cal-dow">${j}</span>`).join("");
+        const pad=(first.getDay()+6)%7;h+="<span></span>".repeat(pad);
+        const n=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();
+        for(let i=1;i<=n;i++){
+          const d=new Date(first.getFullYear(),first.getMonth(),i);
+          const past=d<today,busy=isBooked(d);
+          let cls="cal-day";if(past)cls+=" past";else if(busy)cls+=" busy";
+          if(arr&&+d===+arr)cls+=" sel edge";
+          if(arr&&dep&&d>arr&&d<=dep)cls+=" sel"+(+d===+dep?" edge":"");
+          h+=`<button type="button" class="${cls}" data-iso="${iso(d)}" ${past||busy?"disabled":""} aria-label="${fmt(d)}${busy?", réservé":""}">${i}</button>`;
+        }
+        box.innerHTML=h+"</div>";months.appendChild(box);
+      }
+      months.querySelectorAll(".cal-day:not([disabled])").forEach(b=>b.addEventListener("click",()=>pick(new Date(b.dataset.iso+"T00:00:00"))));
+    }
+    function pick(d){
+      if(!arr||dep||d<=arr){arr=d;dep=null;sum.textContent=`Arrivée ${fmt(d)}. Choisissez la date de départ.`}
+      else if(rangeFree(arr,d)){dep=d;const n=Math.round((dep-arr)/864e5);sum.textContent=`Du ${fmt(arr)} au ${fmt(dep)} · ${n} nuit${n>1?"s":""}. Ces dates sont libres.`}
+      else{sum.textContent="Une partie de ces dates est déjà réservée. Choisissez un autre départ."}
+      draw();
+    }
+    draw();
+  });
+})();</script>
+</body>
+</html>

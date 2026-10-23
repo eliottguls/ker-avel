@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ker Avel · Trois pistes</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{--fond:#f4efe7;--encre:#1f2a33;--doux:#5b6168;--trait:#d9cfbf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--encre);font-family:"Jost","Helvetica Neue",Arial,sans-serif;font-weight:300;font-size:17px;line-height:1.65}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 48px;text-align:center}
+.kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--doux);margin:0 0 14px}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(44px,7vw,76px);line-height:1;margin:0}
+.intro{max-width:620px;margin:22px auto 0;color:var(--doux)}
+.pistes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-bottom:72px}
+.piste{display:flex;flex-direction:column;color:inherit;text-decoration:none}
+.photo{aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden;position:relative}
+.photo span{position:absolute;inset:auto 0 0 0;padding:16px 20px;color:#fff;font-size:13px;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.45))}
+.piste h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:34px;margin:18px 0 4px;line-height:1.1}
+.piste p{margin:0;color:var(--doux)}
+.voir{margin-top:14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:2px}
+.piste:hover .voir,.piste:focus-visible .voir{color:#a9864a}
+.piste:hover .photo{filter:brightness(1.04)}
+footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;color:var(--doux);text-align:center}
+@media (max-width:900px){.pistes{grid-template-columns:1fr;gap:48px}.photo{aspect-ratio:4/3}header{padding:48px 0 36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">Projet de site</p>
+    <h1>Ker Avel</h1>
+    <p class="intro">Trois directions pour le site de la maison. Chacune se parcourt comme un vrai site, calendrier des disponibilités compris. Les textes et les photos sont provisoires.</p>
+  </header>
+  <main class="pistes">
+    <a class="piste" href="grand-large/">
+      <div class="photo" style="background-image:url(img/pointe.jpg)"><span>Piste A</span></div>
+      <h2>Grand Large</h2>
+      <p>Lumineuse et graphique : aplats ocre et ardoise, capitales Art déco, grandes photos en moitié d'écran.</p>
+      <span class="voir">Voir la piste</span>
+    </a>
+    <a class="piste" href="domaine/">
+      <div class="photo" style="background-image:url(img/manoir.jpg)"><span>Piste B</span></div>
+      <h2>Domaine</h2>
+      <p>Élégante et feutrée : fond anthracite, titres dorés, chambres présentées en grands portraits.</p>
+      <span class="voir">Voir la piste</span>
+    </a>
+    <a class="piste" href="cire/">
+      <div class="photo" style="background-image:url(img/chaumiere.jpg)"><span>Piste C</span></div>
+      <h2>Ciré</h2>
+      <p>Chaleureuse et familiale : sable, bleu marine et jaune ciré, une chambre à la fois en plein écran.</p>
+      <span class="voir">Voir la piste</span>
+    </a>
+  </main>
+</div>
+<footer><div class="wrap">Photos d'illustration en attendant celles de la maison.</div></footer>
+</body>
+</html>

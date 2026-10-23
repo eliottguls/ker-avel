@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ker Avel · Grand Large</title>
+<meta name="description" content="Ker Avel, maison de vacances face à la mer sur la Côte d'Émeraude, en Bretagne. 5 chambres, jardin, accès plage à pied. Réservation en direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Federo&family=Josefin+Sans:wght@300;400;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VacationRental","name":"Ker Avel","description":"Maison de vacances face à la mer, Côte d'Émeraude, Bretagne","address":{"@type":"PostalAddress","addressLocality":"Saint-Coulomb","addressRegion":"Bretagne","addressCountry":"FR"},"containsPlace":{"@type":"Accommodation","numberOfBedrooms":5,"occupancy":{"@type":"QuantitativeValue","value":10}}}
+</script>
+<style>
+:root{
+  --ocre:#c19e60; --ocre-fonce:#a9864a; --ardoise:#a3afb7; --lin:#edeae5; --blanc:#ffffff; --encre:#2f2e2e;
+  --display:"Federo", "Josefin Sans", "Futura", "Century Gothic", sans-serif;
+  --body:"Josefin Sans", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--blanc);color:var(--encre);font-family:var(--body);font-weight:300;font-size:18px;line-height:1.7;margin:0}
+.gut{padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
+.tag{position:fixed;z-index:30;left:max(12px, env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--encre);color:var(--blanc);font-size:12px;letter-spacing:.08em;padding:6px 12px}
+.ph{position:relative;overflow:hidden;margin:0;max-width:100%}
+.ph figcaption{position:absolute;right:14px;bottom:12px;color:rgba(255,255,255,.9);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.45)}
+.sea{background:radial-gradient(ellipse at 78% 22%,#fff6e4 0%,transparent 30%),linear-gradient(180deg,#a9c3d0 0%,#e3e9e6 36%,#7ea5b1 38%,#3f6f7c 60%,#c9b38c 61%,#e6d6b8 100%)}
+.dusk{background:radial-gradient(circle at 50% 50%,#ffd9a0 0 4%,transparent 18%),linear-gradient(180deg,#3a4a63 0%,#c78f7a 42%,#f0c99a 50%,#4d6f80 51%,#24404d 100%)}
+.salon{background:radial-gradient(ellipse at 70% 30%,#fbf3e3 0%,transparent 50%),linear-gradient(135deg,#dcc8a6 0%,#b4966c 45%,#5f4a35 100%)}
+.room{background:radial-gradient(ellipse at 25% 35%,#fffaf0 0%,transparent 50%),linear-gradient(160deg,#ece3d3 0%,#c9b99c 50%,#7f6b52 100%)}
+.room2{background:radial-gradient(ellipse at 75% 25%,#fffaf1 0%,transparent 45%),linear-gradient(200deg,#e8dccb 0%,#b9a07a 55%,#6b563f 100%)}
+.room3{background:radial-gradient(ellipse at 60% 30%,#ffffff 0%,transparent 45%),linear-gradient(170deg,#dfe5e4 0%,#a9b9bb 50%,#56707a 100%)}
+.garden{background:radial-gradient(ellipse at 80% 15%,#fff3d6 0%,transparent 30%),linear-gradient(180deg,#cfdde0 0%,#e8ecdf 30%,#9fb07f 32%,#5f7a4b 70%,#3e5434 100%)}
+.cliff{background:linear-gradient(170deg,#c8d6db 0%,#e7ecea 35%,#9a917f 36%,#6b6355 55%,#2f5f6e 56%,#244b58 100%)}
+.oyster{background:radial-gradient(ellipse at 40% 55%,#f4efe6 0%,transparent 30%),linear-gradient(140deg,#7d8c86 0%,#3e4a48 55%,#1f2726 100%)}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--blanc);border-bottom:1px solid var(--lin)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--blanc)}
+.top .in{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:14px}
+.brand{font-family:var(--display);font-size:28px;letter-spacing:.06em;line-height:1;text-transform:uppercase;color:var(--encre);text-decoration:none}
+.brand small{display:block;font-family:var(--body);font-size:9px;letter-spacing:.32em;margin-top:4px;text-align:center}
+.top nav{display:flex;align-items:center;gap:28px;font-family:var(--display);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.top nav a{color:var(--encre);text-decoration:none}
+.top nav a:hover,.top nav a:focus-visible{color:var(--ocre-fonce)}
+.btn{display:inline-block;background:var(--ocre);color:var(--blanc);font-family:var(--display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:9px 22px;border:0}
+.btn:hover,.btn:focus-visible{background:var(--ocre-fonce);color:var(--blanc)}
+.btn:focus-visible,.top nav a:focus-visible{outline:2px solid var(--encre);outline-offset:3px}
+.btn.lin{background:var(--lin);color:var(--encre)}
+.top nav .btn{color:var(--blanc)}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance;margin:0;line-height:1.02}
+.sub{font-size:17px;letter-spacing:.06em;margin:14px 0 0;font-weight:400}
+.rule{display:block;width:34px;height:3px;background:currentColor;margin:26px auto}
+
+.band{height:22px;background:var(--ocre)}
+.hero{height:min(84vh,820px);min-height:440px;display:flex;align-items:flex-end;justify-content:center;color:var(--blanc);text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,28,26,.55) 0%,rgba(30,28,26,.1) 55%,transparent 100%)}
+.hero .in{position:relative;padding-block:0 8vh}
+.hero h1{font-size:clamp(64px,12vw,170px);letter-spacing:.04em;text-shadow:0 2px 40px rgba(0,0,0,.25)}
+.hero .sub{font-size:clamp(16px,1.6vw,20px);text-shadow:0 1px 12px rgba(0,0,0,.35)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:min(92vh,860px)}
+.split > .ph{min-height:100%}
+.split .txt{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:80px;min-width:0}
+.split .txt .inner{max-width:460px}
+.split.rev > .ph{order:2}
+.split h2,.split h3{font-size:clamp(40px,4.6vw,66px)}
+.split p{margin:0 0 1em}
+.split .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
+.c-lin{background:var(--lin);color:var(--encre)}
+.c-lin h3{color:var(--ocre-fonce)}
+.c-ocre{background:var(--ocre);color:var(--encre)}
+.c-ocre h2,.c-ocre h3{color:var(--blanc)}
+.c-ardoise{background:var(--ardoise);color:var(--encre)}
+.c-ardoise h2,.c-ardoise h3{color:var(--blanc)}
+.c-blanc{background:var(--blanc);color:var(--encre)}
+.c-blanc h2{color:var(--ocre)}
+.c-blanc .rule,.c-lin .rule{color:var(--ocre)}
+.c-ocre .rule,.c-ardoise .rule{color:var(--blanc)}
+
+.facts{list-style:none;padding:0;margin:8px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:2px;font-size:15px;max-width:420px;text-align:center}
+.facts li{background:rgba(255,255,255,.55);padding:12px 8px;line-height:1.3}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.02em}
+
+.rooms-head{text-align:center;padding-block:100px 70px;background:var(--blanc)}
+.rooms-head h2{font-size:clamp(44px,6vw,84px);color:var(--ocre)}
+.rooms-head .rule{color:var(--ocre)}
+.rooms-head p{max-width:52ch;margin:0 auto}
+.room-meta{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
+
+.quote{background:var(--lin);text-align:center;padding-block:110px}
+.quote p{font-family:var(--display);font-size:clamp(28px,3.6vw,46px);line-height:1.2;text-transform:uppercase;max-width:24ch;margin:0 auto;color:var(--ocre-fonce)}
+.quote cite{display:block;margin-top:24px;font-style:normal;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+
+.near{display:grid;grid-template-columns:repeat(3,1fr)}
+.near article{position:relative;min-height:min(78vh,720px);display:flex;align-items:flex-end;color:var(--blanc)}
+.near article > .ph{position:absolute;inset:0}
+.near .cap{position:relative;padding:34px 30px;background:linear-gradient(0deg,rgba(20,20,20,.55),transparent);width:100%}
+.near h3{font-size:clamp(30px,2.8vw,42px)}
+.near p{margin:6px 0 0;font-weight:400}
+
+.dispo{background:var(--lin);padding-block:110px;--cal-fg:var(--encre);--cal-line:#cfc6b6;--cal-free:var(--blanc);--cal-busy:#d9cdb6;--cal-busyfg:#7d6a4a;--cal-sel:var(--ocre);--cal-selsoft:#ead9b9;--cal-selfg:var(--blanc)}
+.dispo-in{max-width:980px;margin:0 auto}
+.dispo header{text-align:center;margin-bottom:50px}
+.dispo h2{font-size:clamp(40px,5vw,66px);color:var(--ocre)}
+.dispo .rule{color:var(--ocre)}
+.dispo header p{max-width:56ch;margin:0 auto}
+.dispo header a{color:var(--encre)}
+.dispo .cal-title{font-family:var(--display);font-weight:400;font-size:26px;text-transform:uppercase}
+[data-calendrier]{position:relative;font-variant-numeric:tabular-nums}
+.cal-head{position:absolute;right:0;top:-4px;display:flex;gap:6px}
+.cal-nav{width:36px;height:36px;border:1px solid var(--cal-line);background:transparent;color:var(--cal-fg);font-size:20px;line-height:1;cursor:pointer}
+.cal-nav:hover,.cal-nav:focus-visible{border-color:var(--cal-sel)}
+.cal-months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.cal-title{font-size:22px;text-transform:capitalize;margin:0 0 14px;min-height:36px;display:flex;align-items:center}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal-dow{font-size:11px;letter-spacing:.12em;text-align:center;opacity:.7;padding-bottom:4px}
+.cal-day{aspect-ratio:1;border:0;background:var(--cal-free);color:var(--cal-fg);font:inherit;font-size:14px;cursor:pointer;max-width:100%}
+.cal-day:hover:not([disabled]),.cal-day:focus-visible{outline:2px solid var(--cal-sel);outline-offset:-2px}
+.cal-day.busy{background:var(--cal-busy);color:var(--cal-busyfg);text-decoration:line-through;cursor:not-allowed}
+.cal-day.past{background:transparent;opacity:.35;cursor:default}
+.cal-day.sel{background:var(--cal-selsoft);color:var(--cal-fg)}
+.cal-day.sel.edge{background:var(--cal-sel);color:var(--cal-selfg)}
+.cal-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px;margin-top:22px;font-size:14px}
+.cal-sum{margin:0;flex:1 1 280px;font-weight:500}
+.cal-legend{display:flex;gap:16px;flex-wrap:wrap}
+.cal-legend span{display:flex;align-items:center;gap:6px}
+.lg{display:inline-block;width:14px;height:14px}
+.lg.free{background:var(--cal-free);outline:1px solid var(--cal-line)}.lg.busy{background:var(--cal-busy)}.lg.sel{background:var(--cal-sel)}
+.cal-src{margin:0;flex-basis:100%;font-size:12px;opacity:.75}
+@media (max-width:700px){.cal-months{grid-template-columns:1fr;gap:28px}}
+
+.book{display:grid;grid-template-columns:1fr 1fr}
+.book > .ph{min-height:560px}
+.book .txt{background:var(--ardoise);color:var(--encre);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:80px;min-width:0}
+.book h2{font-size:clamp(40px,5vw,72px);color:var(--blanc)}
+.book .rule{color:var(--blanc)}
+.book p{max-width:40ch;margin:0 0 26px}
+
+footer.foot{background:var(--encre);color:var(--lin);font-size:15px}
+footer .in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-block:56px}
+footer .brand{color:var(--lin);font-size:30px}
+@media (max-width:900px){
+  .top nav a:not(.btn){display:none}
+  .split,.book{grid-template-columns:1fr;min-height:0}
+  .split > .ph,.book > .ph{min-height:68vh;order:0!important}
+  .near{grid-template-columns:1fr}
+  .near article{min-height:62vh}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise 1.2s ease-out both}
+  @keyframes rise{from{transform:translateY(16px)}to{transform:none}}
+}
+</style>
+</head>
+<body>
+<a class="tag" href="../" style="text-decoration:none">← Les trois pistes</a>
+
+<header class="top gut">
+  <div class="in">
+    <a class="brand" href="#">Ker Avel<small>Saint-Coulomb</small></a>
+    <nav aria-label="Navigation principale">
+      <a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a href="#dispos">Disponibilités</a><a class="btn" href="#dispos">Réservez</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="band"></div>
+  <section class="hero ph sea gut" aria-label="Accueil" style="background:url(../img/pointe.jpg) center/cover">
+    <div class="in">
+      <h1>Ker Avel</h1>
+      <p class="sub">Maison de famille face à la mer · Côte d'Émeraude</p>
+    </div>
+  </section>
+
+  <section id="maison" class="split rev">
+    <figure class="ph salon" style="background:url(../img/salon.jpg) center/cover"></figure>
+    <div class="txt c-blanc gut"><div class="inner">
+      <h2>Granit, lumière et bruit des vagues</h2>
+      <p class="sub">Une maison de 1912 sur la pointe du Meinga</p>
+      <span class="rule"></span>
+      <p>Construite par une famille d'armateurs malouins, Ker Avel garde ses parquets et ses cheminées d'origine. Ses grandes baies ouvrent toutes sur la mer.</p>
+      <p>On y vient à dix, en famille ou entre amis, pour une semaine de marées et de longues tablées.</p>
+      <div class="btns"><a class="btn" href="#dispos">Je réserve</a></div>
+    </div></div>
+  </section>
+
+  <section class="split">
+    <figure class="ph garden" style="background:url(../img/hortensias.jpg) center/cover"></figure>
+    <div class="txt c-ardoise gut"><div class="inner">
+      <h2>Un hectare de pins et d'hortensias</h2>
+      <p class="sub">Dîner dehors jusqu'au coucher du soleil</p>
+      <span class="rule"></span>
+      <p>La terrasse plein ouest reçoit la grande table d'été. Un sentier privé descend en cinq minutes jusqu'à la plage du Guesclin.</p>
+      <ul class="facts">
+        <li><b>10</b>personnes</li>
+        <li><b>5</b>chambres</li>
+        <li><b>5 min</b>de la plage à pied</li>
+        <li><b>15 min</b>de Saint-Malo</li>
+      </ul>
+    </div></div>
+  </section>
+
+  <section id="chambres" aria-labelledby="t-ch">
+    <div class="rooms-head gut">
+      <h2 id="t-ch">Les chambres</h2>
+      <p class="sub">Cinq chambres, cinq vues</p>
+      <span class="rule"></span>
+      <p>Chacune a sa salle de bain, du linge de lin lavé et une fenêtre sur la baie ou sur le jardin.</p>
+    </div>
+
+    <article class="split">
+      <figure class="ph room" style="background:url(../img/chambre-lucarne.jpg) center/cover"></figure>
+      <div class="txt c-ocre gut"><div class="inner">
+        <h3>Émeraude</h3>
+        <p class="sub">La plus grande, sous les combles</p>
+        <span class="rule"></span>
+        <p>Un balcon sur la baie, une baignoire face à la fenêtre et le phare du Grand Jardin dans l'axe du lit.</p>
+        <ul class="room-meta"><li>Lit 180</li><li>28 m²</li><li>Vue mer</li></ul>
+      </div></div>
+    </article>
+
+    <article class="split rev">
+      <figure class="ph room2" style="background:url(../img/chambre-fenetres.jpg) center/cover"></figure>
+      <div class="txt c-lin gut"><div class="inner">
+        <h3>Goémon</h3>
+        <p class="sub">De plain-pied sur le jardin</p>
+        <span class="rule"></span>
+        <p>Une porte-fenêtre ouvre sur les hortensias. Baignoire à pattes et douche à l'italienne.</p>
+        <ul class="room-meta"><li>Lit 160</li><li>22 m²</li><li>Vue jardin</li></ul>
+      </div></div>
+    </article>
+
+    <article class="split">
+      <figure class="ph room3" style="background:url(../img/chambre-soleil.jpg) center/cover"></figure>
+      <div class="txt c-ardoise gut"><div class="inner">
+        <h3>Les Mousses</h3>
+        <p class="sub">La chambre des enfants</p>
+        <span class="rule"></span>
+        <p>Quatre lits simples sous la charpente, des hublots sur la mer et une malle pleine de jeux de plage.</p>
+        <ul class="room-meta"><li>4 lits 90</li><li>26 m²</li><li>Vue mer</li></ul>
+      </div></div>
+    </article>
+  </section>
+
+  <section class="quote gut">
+    <p>« Le matin, on ouvre les volets et la mer est dans la chambre. »</p>
+    <cite>Claire, séjour d'août 2025</cite>
+  </section>
+
+  <section class="split rev">
+    <figure class="ph dusk" style="background:url(../img/saint-malo-couchant.jpg) center/cover"></figure>
+    <div class="txt c-ocre gut"><div class="inner">
+      <h2>Coefficient 110, la baie se vide</h2>
+      <p class="sub">Les grandes marées depuis la terrasse</p>
+      <span class="rule"></span>
+      <p>La mer se retire à perte de vue. On marche jusqu'à l'île du Guesclin, on pêche entre les rochers, puis on rentre avant le flot.</p>
+      <div class="btns"><a class="btn lin" href="#alentours">Je découvre les alentours</a></div>
+    </div></div>
+  </section>
+
+  <section id="alentours" aria-label="Alentours" class="near">
+    <article><figure class="ph cliff" style="background:url(../img/landes.jpg) center/cover"></figure><div class="cap"><h3>Le GR34</h3><p>Le sentier des douaniers passe au bout du jardin.</p></div></article>
+    <article><figure class="ph sea" style="background:url(../img/saint-malo.jpg) center/cover"></figure><div class="cap"><h3>Saint-Malo</h3><p>Les remparts et la cité corsaire à 15 minutes.</p></div></article>
+    <article><figure class="ph oyster" style="background:url(../img/huitres.jpg) center/cover"></figure><div class="cap"><h3>Cancale</h3><p>Les huîtres sur le port, à 12 minutes.</p></div></article>
+  </section>
+
+  <section id="dispos" class="dispo gut" aria-labelledby="t-dispo">
+    <div class="dispo-in">
+      <header>
+        <h2 id="t-dispo">Vos dates</h2>
+        <p class="sub">Calendrier mis à jour avec nos réservations Airbnb</p>
+        <span class="rule"></span>
+        <p>Choisissez une arrivée puis un départ. Réservez en direct ici, ou sur <a href="#dispos">notre annonce Airbnb</a>.</p>
+      </header>
+      <div data-calendrier></div>
+    </div>
+  </section>
+
+  <section id="reserver" class="book">
+    <figure class="ph dusk" style="background:url(../img/guirlandes.jpg) center/cover"></figure>
+    <div class="txt gut">
+      <h2>Réservez</h2>
+      <p class="sub">Au printemps, l'été, en arrière-saison</p>
+      <span class="rule"></span>
+      <p>De mai à octobre, à la semaine, du samedi au samedi. Hors saison, en week-end de deux nuits minimum.</p>
+      <a class="btn" href="#dispos">Je réserve</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot gut">
+  <div class="in">
+    <div class="brand">Ker Avel<small>Saint-Coulomb</small></div>
+    <div>Pointe du Meinga<br>35350 Saint-Coulomb</div>
+    <div>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></div>
+  </div>
+</footer>
+<script>
+(function(){
+  const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  const JOURS=["L","M","M","J","V","S","D"];
+  const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const fmt=d=>d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"long"});
+  const today=new Date();today.setHours(0,0,0,0);
+  const add=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+  const booked=[[5,12],[19,23],[33,40],[47,54],[61,64],[75,89]].map(([a,b])=>[add(today,a),add(today,b)]);
+  const isBooked=d=>booked.some(([a,b])=>d>=a&&d<b);
+
+  document.querySelectorAll("[data-calendrier]").forEach(root=>{
+    let offset=0,arr=null,dep=null;
+    root.innerHTML=`<div class="cal-head"><button type="button" class="cal-nav" data-d="-1" aria-label="Mois précédents">‹</button><button type="button" class="cal-nav" data-d="1" aria-label="Mois suivants">›</button></div><div class="cal-months"></div><div class="cal-foot"><p class="cal-sum" aria-live="polite">Choisissez une date d'arrivée.</p><div class="cal-legend"><span><i class="lg free"></i>Libre</span><span><i class="lg busy"></i>Réservé</span><span><i class="lg sel"></i>Votre séjour</span></div><p class="cal-src">Synchronisé avec l'annonce Airbnb · dates d'exemple</p></div>`;
+    const months=root.querySelector(".cal-months"),sum=root.querySelector(".cal-sum");
+    root.querySelectorAll(".cal-nav").forEach(b=>b.addEventListener("click",()=>{offset=Math.max(0,offset+ +b.dataset.d);draw()}));
+    function rangeFree(a,b){for(let d=new Date(a);d<b;d=add(d,1))if(isBooked(d))return false;return true}
+    function draw(){
+      months.innerHTML="";
+      for(let m=0;m<2;m++){
+        const first=new Date(today.getFullYear(),today.getMonth()+offset+m,1);
+        const box=document.createElement("div");box.className="cal-month";
+        let h=`<h3 class="cal-title">${MOIS[first.getMonth()]} ${first.getFullYear()}</h3><div class="cal-grid">`+JOURS.map(j=>`<span class="cal-dow">${j}</span>`).join("");
+        const pad=(first.getDay()+6)%7;h+="<span></span>".repeat(pad);
+        const n=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();
+        for(let i=1;i<=n;i++){
+          const d=new Date(first.getFullYear(),first.getMonth(),i);
+          const past=d<today,busy=isBooked(d);
+          let cls="cal-day";if(past)cls+=" past";else if(busy)cls+=" busy";
+          if(arr&&+d===+arr)cls+=" sel edge";
+          if(arr&&dep&&d>arr&&d<=dep)cls+=" sel"+(+d===+dep?" edge":"");
+          h+=`<button type="button" class="${cls}" data-iso="${iso(d)}" ${past||busy?"disabled":""} aria-label="${fmt(d)}${busy?", réservé":""}">${i}</button>`;
+        }
+        box.innerHTML=h+"</div>";months.appendChild(box);
+      }
+      months.querySelectorAll(".cal-day:not([disabled])").forEach(b=>b.addEventListener("click",()=>pick(new Date(b.dataset.iso+"T00:00:00"))));
+    }
+    function pick(d){
+      if(!arr||dep||d<=arr){arr=d;dep=null;sum.textContent=`Arrivée ${fmt(d)}. Choisissez la date de départ.`}
+      else if(rangeFree(arr,d)){dep=d;const n=Math.round((dep-arr)/864e5);sum.textContent=`Du ${fmt(arr)} au ${fmt(dep)} · ${n} nuit${n>1?"s":""}. Ces dates sont libres.`}
+      else{sum.textContent="Une partie de ces dates est déjà réservée. Choisissez un autre départ."}
+      draw();
+    }
+    draw();
+  });
+})();</script>
+</body>
+</html>
