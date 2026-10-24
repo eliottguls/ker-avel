@@ -1,6 +1,6 @@
 """Génère les pages chambres des trois pistes : <piste>/chambre-<id>.html.
 
-Usage : python3 outils/chambres.py  (depuis la racine du dépôt)
+Usage : python3 outils/chambres.py && python3 outils/site.py  (depuis la racine du dépôt)
 Les textes et les photos sont dans CHAMBRES ; chaque piste a sa propre mise en page.
 """
 from html import escape
@@ -165,7 +165,7 @@ def page_a(liste, i):
   <div class="in">
     <a class="brand" href="./">Ker Avel<small>Saint-Coulomb</small></a>
     <nav aria-label="Navigation principale">
-      <a href="./#maison">La maison</a><a href="./#chambres" aria-current="page">Chambres</a><a href="./#alentours">Alentours</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#maison">La maison</a><a href="./#chambres">Chambres</a><a href="./#alentours">Alentours</a><a href="./#reserver">Réserver</a></div></details><a class="btn" href="./#reserver">Réservez</a>
+      <a href="./#maison">La maison</a><a href="./#chambres" aria-current="page">Chambres</a><a href="./#alentours">Alentours</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#maison">La maison</a><a href="./#chambres">Chambres</a><a href="./#alentours">Alentours</a><a href="./#reserver">Réserver</a></div></details><a class="btn" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réservez</a>
     </nav>
   </div>
 </header>
@@ -181,7 +181,7 @@ def page_a(liste, i):
       <span class="rule"></span>
       {''.join(f'<p>{e(x)}</p>' for x in c['p'])}
       {fiche_dl(c)}
-      <div class="btns"><a class="btn" href="./#reserver">Réserver cette chambre</a></div>
+      <div class="btns"><a class="btn" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver cette chambre</a></div>
       <nav class="suite" aria-label="Autres chambres"><a href="chambre-{prec['id']}.html">‹ {e(prec['nom'])}</a><a href="chambre-{suiv['id']}.html">{e(suiv['nom'])} ›</a></nav>
     </div></div>
   </section>
@@ -198,12 +198,13 @@ def page_a(liste, i):
 """
 
 
-ANNONCE_A = """<p class="annonce gut">Prochaines disponibilités : la semaine du 7 novembre, puis les vacances de Noël. <a href="./#reserver">Réserver une date</a></p>"""
+ANNONCE_A = """<p class="annonce gut">Prochaines disponibilités : la semaine du 7 novembre, puis les vacances de Noël. <a data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver une date</a></p>"""
 PIED_A = """<footer class="foot gut">
   <div class="in">
     <div class="brand">Ker Avel<small>Saint-Coulomb</small></div>
     <div>Pointe du Meinga<br>35350 Saint-Coulomb</div>
     <div>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></div>
+    <!--carte--><!--/carte-->
   </div>
 </footer>"""
 
@@ -216,7 +217,7 @@ NAV_B = """<header class="top gut">
       <svg viewBox="0 0 42 34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 33h36M7 33V15L21 4l14 11v18M16 33v-9h10v9M11 18h4v4h-4zM27 18h4v4h-4zM21 4V1"/></svg>
       <span>Ker Avel</span><small>Demeure · Bretagne</small>
     </a>
-    <nav class="r" aria-label="Réservation"><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#demeure">La demeure</a><a href="./#chambres">Chambres</a><a href="./#alentours">Alentours</a><a href="./#reserver">Réserver</a></div></details><a class="gold" href="./#reserver">Réserver</a></nav>
+    <nav class="r" aria-label="Réservation"><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#demeure">La demeure</a><a href="./#chambres">Chambres</a><a href="./#alentours">Alentours</a><a href="./#reserver">Réserver</a></div></details><a class="gold" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver</a></nav>
   </div>
 </header>"""
 
@@ -227,7 +228,7 @@ def bandeau_b(liste, actif=None):
     return f'<nav class="noms gut" aria-label="Les chambres"><div class="wrap">{liens}</div></nav>'
 
 
-PIED_B = """<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga · 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>"""
+PIED_B = """<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga · 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span><!--carte--><!--/carte--></div></footer>"""
 
 
 def page_b(liste, i):
@@ -267,7 +268,7 @@ def page_b(liste, i):
           <button type="button" data-d="1" aria-label="Photo suivante">›</button>
         </div>
       </div>
-      <a class="gold" href="./#reserver">Réserver cette chambre</a>
+      <a class="gold" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver cette chambre</a>
     </div>
   </section>
 
@@ -302,7 +303,7 @@ def entete_c(plein=False):
   <div class="wrap">
     <a class="ruban" href="./" aria-label="Ker Avel, accueil"><span>Bretagne</span></a>
     <a class="brand" href="./">Ker Avel</a>
-    <nav aria-label="Navigation principale"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a></div></details><a class="btn" href="mailto:contact@ker-avel.bzh">Réserver</a></nav>
+    <nav aria-label="Navigation principale"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a></div></details><a class="btn" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver</a></nav>
   </div>
 </header>"""
 
@@ -313,8 +314,8 @@ def bandeau_c(liste, actif=None):
     return f'<nav class="noms gut" aria-label="Les chambres"><div class="wrap">{liens}</div></nav>'
 
 
-PIED_C = """<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga, 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>"""
-FLOTTANT_C = """<a class="flottant" href="mailto:contact@ker-avel.bzh">Réserver</a>
+PIED_C = """<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga, 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span><!--carte--><!--/carte--></div></footer>"""
+FLOTTANT_C = """<a class="flottant" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver</a>
 <script>
 (function(){
   var b=document.querySelector(".flottant"),h=document.querySelector(".hero")||document.querySelector(".top");if(!b||!h)return;
@@ -352,7 +353,7 @@ def page_c(liste, i):
       <div>
         <h2>{e(c['sous'])}</h2>
         {''.join(f'<p>{e(x)}</p>' for x in c['p'])}
-        <a class="btn" href="mailto:contact@ker-avel.bzh">Réserver cette chambre</a>
+        <a class="btn" data-airbnb target="_blank" rel="noopener" href="https://www.airbnb.fr/">Réserver cette chambre</a>
       </div>
       <aside class="aime">
         <h3>Ce qu'on aime ici</h3>

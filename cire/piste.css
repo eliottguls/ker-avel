@@ -220,3 +220,24 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
   .top .btn{padding:12px 14px;letter-spacing:.1em}
   .menu summary{padding:0 12px;letter-spacing:.1em}
 }
+
+/* Pied de page avec carte postale et annotation manuscrite */
+footer .wrap{align-items:flex-start}
+.plan{margin:0;flex:0 1 400px;background:var(--sable);color:var(--encre);padding:12px 12px 16px;transform:rotate(-1.5deg);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.carte{display:block;width:100%;height:auto}
+.carte .mer{fill:color-mix(in srgb,var(--marine) 14%,var(--sable))}
+.carte .voisins{fill:var(--sable2)}
+.carte .terre{fill:var(--blanc);stroke:var(--marine);stroke-width:1.2}
+.carte .ville{fill:var(--marine)}
+.carte text{font:400 28px var(--body);fill:var(--marine)}
+.carte .pin path{fill:var(--cire);stroke:var(--marine);stroke-width:1.5}
+.carte .pin .oeil{fill:var(--marine)}
+.carte .pin .halo{fill:var(--cire);opacity:.35}
+.carte .nom{font-family:"Caveat",cursive;font-weight:500;font-size:40px;fill:var(--marine)}
+.plan figcaption{display:grid;gap:4px;margin-top:8px;padding-inline:4px;font-size:15px;line-height:1.5}
+.plan figcaption a{color:var(--marine);font-weight:500;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.final .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn.lin{background:transparent;color:var(--blanc);box-shadow:inset 0 0 0 1px var(--blanc)}
+.btn.lin:hover,.btn.lin:focus-visible{background:var(--blanc);color:var(--marine)}
+@media (max-width:900px){.plan{flex-basis:100%;transform:none}}
+@media (prefers-reduced-motion:reduce){.plan{transform:none}}

@@ -188,3 +188,22 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
   .top nav .btn{padding:8px 16px;font-size:15px}
   .menu summary{padding:0 12px}
 }
+
+/* Pied de page avec carte (plan et accès) */
+footer.foot .in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.6fr);align-items:start;gap:32px}
+.plan{margin:0;background:var(--lin);color:var(--encre);padding:16px}
+.carte{display:block;width:100%;height:auto}
+.carte .mer{fill:color-mix(in srgb,var(--ardoise) 40%,var(--lin))}
+.carte .voisins{fill:color-mix(in srgb,var(--encre) 8%,var(--lin))}
+.carte .terre{fill:var(--blanc);stroke:var(--encre);stroke-width:1;stroke-opacity:.5}
+.carte .ville{fill:var(--encre)}
+.carte text{font:400 28px var(--body);fill:var(--encre)}
+.carte .pin path{fill:var(--ocre-fonce)}
+.carte .pin .oeil{fill:var(--blanc)}
+.carte .pin .halo{fill:var(--ocre);opacity:.35}
+.carte .nom{font-family:var(--display);font-size:30px;text-transform:uppercase;fill:var(--ocre-fonce)}
+.plan figcaption{display:grid;gap:4px;margin-top:12px;font-size:15px;line-height:1.5}
+.plan figcaption a{color:inherit;font-weight:400;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.btns .btn.lin:hover,.btns .btn.lin:focus-visible{background:var(--encre);color:var(--blanc)}
+@media (max-width:900px){footer.foot .in{grid-template-columns:1fr 1fr}.plan{grid-column:1/-1}}
+@media (max-width:600px){footer.foot .in{grid-template-columns:1fr}}
