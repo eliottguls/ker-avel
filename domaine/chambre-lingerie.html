@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr" data-page="domaine">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Lingerie, chambre de Ker Avel</title>
+<meta name="description" content="La Lingerie : intime, sur le parc. Lit 140, 18 m², vue parc. Chambre de Ker Avel, maison de vacances en Bretagne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<link rel="stylesheet" href="piste.css">
+<link rel="stylesheet" href="../assets/chartes.css">
+<script src="../assets/chartes.js"></script>
+</head>
+<body class="page-chambre">
+<a class="tag" href="../" style="text-decoration:none">← Les trois pistes</a>
+<header class="top gut">
+  <div class="wrap">
+    <nav class="l" aria-label="Navigation principale"><a href="./#demeure"><span>La demeure</span><small>& son parc</small></a><a href="./#chambres" aria-current="page"><span>Chambres</span><small>cinq au total</small></a><a href="./#alentours"><span>Alentours</span><small>la Côte d'Émeraude</small></a></nav>
+    <a class="logo" href="./">
+      <svg viewBox="0 0 42 34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 33h36M7 33V15L21 4l14 11v18M16 33v-9h10v9M11 18h4v4h-4zM27 18h4v4h-4zM21 4V1"/></svg>
+      <span>Ker Avel</span><small>Demeure · Bretagne</small>
+    </a>
+    <nav class="r" aria-label="Réservation"><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#demeure">La demeure</a><a href="./#chambres">Chambres</a><a href="./#alentours">Alentours</a><a href="./#reserver">Réserver</a></div></details><a class="gold" href="./#reserver">Réserver</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero ph gut" aria-label="La Lingerie" style="background:url(../img/chambre-sombre.jpg) center/cover">
+    <div class="in">
+      <p class="fil"><a href="./#chambres">Les chambres</a></p>
+      <h1>La Lingerie</h1>
+      <p class="sub">Intime, sur le parc</p>
+    </div>
+  </section>
+  <div class="lin-band" aria-hidden="true"></div>
+
+  <section class="intro gut">
+    <div class="wrap">
+      <p>L&#x27;ancienne lingerie de la demeure, aux murs chaulés et aux rideaux de lin.</p><p>Une chambre douce et sombre, la plus fraîche de la maison en plein été.</p>
+    </div>
+  </section>
+
+  <section class="dark ch-b gut" aria-label="La chambre en bref">
+    <div class="wrap">
+      <dl class="fiche-b"><div><dt>Couchage</dt><dd>Lit 140</dd></div><div><dt>Surface</dt><dd>18 m²</dd></div><div><dt>Vue</dt><dd>Parc</dd></div><div><dt>Bain</dt><dd>Douche</dd></div></dl>
+      <div class="diapo" data-diapo>
+        <div class="vues"><figure class="ph on" style="background:url(../img/chambre-sombre.jpg) center/cover" aria-hidden="false"></figure><figure class="ph" style="background:url(../img/chevet.jpg) center/cover" aria-hidden="true"></figure><figure class="ph" style="background:url(../img/bain-blanc.jpg) center/cover" aria-hidden="true"></figure><figure class="ph" style="background:url(../img/longere.jpg) center/cover" aria-hidden="true"></figure></div>
+        <div class="diapo-nav">
+          <button type="button" data-d="-1" aria-label="Photo précédente">‹</button>
+          <p class="compte" aria-live="polite">1 / 4</p>
+          <button type="button" data-d="1" aria-label="Photo suivante">›</button>
+        </div>
+      </div>
+      <a class="gold" href="./#reserver">Réserver cette chambre</a>
+    </div>
+  </section>
+
+  <section class="disc gut" aria-labelledby="t-suite">
+    <div class="wrap">
+      <h2 id="t-suite">Poursuivre la visite</h2>
+      <div class="duo"><a class="card" href="chambre-hortensias.html"><figure class="ph" style="background:url(../img/chambre-lucarne.jpg) center/cover"></figure><span class="lbl"><span class="k">Chambre précédente</span><h3>Les Hortensias</h3><span class="more">Découvrir</span></span></a><a class="card" href="chambre-mousses.html"><figure class="ph" style="background:url(../img/chambre-claire.jpg) center/cover"></figure><span class="lbl"><span class="k">Chambre suivante</span><h3>Les Mousses</h3><span class="more">Découvrir</span></span></a></div>
+    </div>
+  </section>
+</main>
+<nav class="noms gut" aria-label="Les chambres"><div class="wrap"><a href="chambre-armateur.html">L&#x27;Armateur</a><a href="chambre-capitainerie.html">La Capitainerie</a><a href="chambre-hortensias.html">Les Hortensias</a><a href="chambre-lingerie.html" aria-current="page">La Lingerie</a><a href="chambre-mousses.html">Les Mousses</a></div></nav>
+<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga · 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>
+<script>
+(function(){
+  var d=document.querySelector("[data-diapo]");if(!d)return;
+  var vues=d.querySelectorAll(".vues figure"),compte=d.querySelector(".compte"),i=0;
+  d.querySelectorAll("[data-d]").forEach(function(b){b.addEventListener("click",function(){
+    i=(i+ +b.getAttribute("data-d")+vues.length)%vues.length;
+    vues.forEach(function(v,k){v.classList.toggle("on",k===i);v.setAttribute("aria-hidden",k===i?"false":"true")});
+    compte.textContent=(i+1)+" / "+vues.length;
+  })});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr" data-page="cire">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lin, chambre de Ker Avel</title>
+<meta name="description" content="Lin : sous les combles, face à la baie. Lit 180, 24 m², vue mer. Chambre de Ker Avel, maison de vacances en Bretagne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Jost:ital,wght@0,300;0,400;0,500;1,300&family=Caveat:wght@500&display=swap">
+<link rel="stylesheet" href="piste.css">
+<link rel="stylesheet" href="../assets/chartes.css">
+<script src="../assets/chartes.js"></script>
+</head>
+<body class="page-chambre">
+<a class="tag" href="../" style="text-decoration:none">← Les trois pistes</a>
+<header class="top gut plein">
+  <div class="wrap">
+    <a class="ruban" href="./" aria-label="Ker Avel, accueil"><span>Bretagne</span></a>
+    <a class="brand" href="./">Ker Avel</a>
+    <nav aria-label="Navigation principale"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="./#maison">La maison</a><a href="./#journee">Une journée</a><a href="./#chambres">Chambres</a></div></details><a class="btn" href="mailto:contact@ker-avel.bzh">Réserver</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="ch-c gut">
+    <div class="wrap">
+      <p class="fil"><a href="./#chambres">Les chambres</a></p>
+      <div class="ch-titre">
+        <h1>Lin</h1>
+        <p class="note">la préférée des lève-tôt</p>
+      </div>
+      <ul class="hero-meta"><li>Lit 180</li><li>24 m²</li><li>Vue mer</li><li>Salle d&#x27;eau</li></ul>
+    </div>
+  </section>
+  <div class="collage gut"><div class="wrap">
+    <figure class="ph a" style="background:url(../img/chambre-fenetres.jpg) center/cover"></figure>
+    <figure class="ph b" style="background:url(../img/pointe.jpg) center/cover"></figure>
+    <figure class="ph c" style="background:url(../img/bain-blanc.jpg) center/cover"></figure>
+  </div></div>
+  <section class="gut">
+    <div class="wrap ch-texte">
+      <div>
+        <h2>Sous les combles, face à la baie</h2>
+        <p>Un balcon face à la baie et le phare du Grand Jardin dans l&#x27;axe du lit.</p><p>On y laisse les volets ouverts la nuit pour se réveiller avec la marée.</p>
+        <a class="btn" href="mailto:contact@ker-avel.bzh">Réserver cette chambre</a>
+      </div>
+      <aside class="aime">
+        <h3>Ce qu'on aime ici</h3>
+        <ul><li>le café sur le balcon</li><li>le phare dans l&#x27;axe du lit</li><li>le plaid de laine de Plouguerneau</li></ul>
+      </aside>
+    </div>
+  </section>
+  <figure class="ph vue" style="background:url(../img/chevet.jpg) center/cover"></figure>
+  <section class="gut liste-autres" aria-labelledby="t-autres">
+    <div class="wrap">
+      <h2 id="t-autres">Les autres chambres</h2>
+      <ul><li><a href="chambre-chanvre.html"><span class="n">Chanvre</span><span class="s">De plain-pied sur le jardin</span></a></li><li><a href="chambre-ardoise.html"><span class="n">Ardoise</span><span class="s">La plus calme, côté pins</span></a></li><li><a href="chambre-mousses.html"><span class="n">Les Mousses</span><span class="s">La chambre des enfants</span></a></li><li><a href="chambre-jardinier.html"><span class="n">Le Jardinier</span><span class="s">La petite maison du fond du jardin</span></a></li></ul>
+    </div>
+  </section>
+</main>
+<footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga, 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>
+<a class="flottant" href="mailto:contact@ker-avel.bzh">Réserver</a>
+<script>
+(function(){
+  var b=document.querySelector(".flottant"),h=document.querySelector(".hero")||document.querySelector(".top");if(!b||!h)return;
+  new IntersectionObserver(function(es){b.classList.toggle("visible",!es[0].isIntersecting)}).observe(h);
+})();
+</script>
+</body>
+</html>

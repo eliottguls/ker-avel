@@ -87,9 +87,15 @@ html[data-page="cire"][data-charte="lande"]{--sable:#ece5d8;--sable2:#ddd3c1;--m
 /* Pastilles de chiffres (piste A) : fond translucide foncé quand l'aplat est sombre */
 html[data-page="grand-large"][data-charte="nuit"] .facts li,
 html[data-page="grand-large"][data-charte="granit"] .facts li,
-html[data-page="grand-large"][data-charte="lande"] .facts li{background:rgba(255,255,255,.08)}
+html[data-page="grand-large"][data-charte="lande"] .facts li,
+html[data-page="grand-large"][data-charte="nuit"] .c-ardoise .fiche div,
+html[data-page="grand-large"][data-charte="granit"] .c-ardoise .fiche div,
+html[data-page="grand-large"][data-charte="lande"] .c-ardoise .fiche div,
+html[data-page="grand-large"][data-charte="lande"] .c-ocre .fiche div{background:rgba(255,255,255,.08)}
 html[data-page="cire"][data-charte="ocre"]{--marine2:#4d5860}
 html[data-page="grand-large"][data-charte="lande"] .c-ocre{color:#ffffff}
 html[data-page="domaine"][data-charte="lande"] .gold{color:#ffffff!important}
 html[data-page="domaine"][data-charte="lande"] .tag{background:#d1ad73}
 html[data-page="domaine"][data-charte="lande"] footer b{color:#d1ad73}
+html[data-page="domaine"][data-charte="lande"] .noms a{color:#e6cf9e}
+html[data-page="domaine"][data-charte="lande"] .fiche-b dt{color:#d1ad73}
