@@ -99,36 +99,6 @@ h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;let
 .near h3{font-size:clamp(30px,2.8vw,42px)}
 .near p{margin:6px 0 0;font-weight:400}
 
-.dispo{background:var(--lin);padding-block:110px;--cal-fg:var(--encre);--cal-line:#cfc6b6;--cal-free:var(--blanc);--cal-busy:#d9cdb6;--cal-busyfg:#7d6a4a;--cal-sel:var(--ocre);--cal-selsoft:#ead9b9;--cal-selfg:var(--blanc)}
-.dispo-in{max-width:980px;margin:0 auto}
-.dispo header{text-align:center;margin-bottom:50px}
-.dispo h2{font-size:clamp(40px,5vw,66px);color:var(--ocre)}
-.dispo .rule{color:var(--ocre)}
-.dispo header p{max-width:56ch;margin:0 auto}
-.dispo header a{color:var(--encre)}
-.dispo .cal-title{font-family:var(--display);font-weight:400;font-size:26px;text-transform:uppercase}
-[data-calendrier]{position:relative;font-variant-numeric:tabular-nums}
-.cal-head{position:absolute;right:0;top:-4px;display:flex;gap:6px}
-.cal-nav{width:36px;height:36px;border:1px solid var(--cal-line);background:transparent;color:var(--cal-fg);font-size:20px;line-height:1;cursor:pointer}
-.cal-nav:hover,.cal-nav:focus-visible{border-color:var(--cal-sel)}
-.cal-months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
-.cal-title{font-size:22px;text-transform:capitalize;margin:0 0 14px;min-height:36px;display:flex;align-items:center}
-.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
-.cal-dow{font-size:11px;letter-spacing:.12em;text-align:center;opacity:.7;padding-bottom:4px}
-.cal-day{aspect-ratio:1;border:0;background:var(--cal-free);color:var(--cal-fg);font:inherit;font-size:14px;cursor:pointer;max-width:100%}
-.cal-day:hover:not([disabled]),.cal-day:focus-visible{outline:2px solid var(--cal-sel);outline-offset:-2px}
-.cal-day.busy{background:var(--cal-busy);color:var(--cal-busyfg);text-decoration:line-through;cursor:not-allowed}
-.cal-day.past{background:transparent;opacity:.35;cursor:default}
-.cal-day.sel{background:var(--cal-selsoft);color:var(--cal-fg)}
-.cal-day.sel.edge{background:var(--cal-sel);color:var(--cal-selfg)}
-.cal-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px;margin-top:22px;font-size:14px}
-.cal-sum{margin:0;flex:1 1 280px;font-weight:500}
-.cal-legend{display:flex;gap:16px;flex-wrap:wrap}
-.cal-legend span{display:flex;align-items:center;gap:6px}
-.lg{display:inline-block;width:14px;height:14px}
-.lg.free{background:var(--cal-free);outline:1px solid var(--cal-line)}.lg.busy{background:var(--cal-busy)}.lg.sel{background:var(--cal-sel)}
-.cal-src{margin:0;flex-basis:100%;font-size:12px;opacity:.75}
-@media (max-width:700px){.cal-months{grid-template-columns:1fr;gap:28px}}
 
 .book{display:grid;grid-template-columns:1fr 1fr}
 .book > .ph{min-height:560px}
@@ -160,7 +130,7 @@ footer .brand{color:var(--lin);font-size:30px}
   <div class="in">
     <a class="brand" href="#">Ker Avel<small>Saint-Coulomb</small></a>
     <nav aria-label="Navigation principale">
-      <a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a href="#dispos">Disponibilités</a><a class="btn" href="#dispos">Réservez</a>
+      <a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a class="btn" href="#reserver">Réservez</a>
     </nav>
   </div>
 </header>
@@ -182,7 +152,7 @@ footer .brand{color:var(--lin);font-size:30px}
       <span class="rule"></span>
       <p>Construite par une famille d'armateurs malouins, Ker Avel garde ses parquets et ses cheminées d'origine. Ses grandes baies ouvrent toutes sur la mer.</p>
       <p>On y vient à dix, en famille ou entre amis, pour une semaine de marées et de longues tablées.</p>
-      <div class="btns"><a class="btn" href="#dispos">Je réserve</a></div>
+      <div class="btns"><a class="btn" href="#reserver">Je réserve</a></div>
     </div></div>
   </section>
 
@@ -266,17 +236,6 @@ footer .brand{color:var(--lin);font-size:30px}
     <article><figure class="ph oyster" style="background:url(../img/huitres.jpg) center/cover"></figure><div class="cap"><h3>Cancale</h3><p>Les huîtres sur le port, à 12 minutes.</p></div></article>
   </section>
 
-  <section id="dispos" class="dispo gut" aria-labelledby="t-dispo">
-    <div class="dispo-in">
-      <header>
-        <h2 id="t-dispo">Vos dates</h2>
-        <p class="sub">Calendrier mis à jour avec nos réservations Airbnb</p>
-        <span class="rule"></span>
-        <p>Choisissez une arrivée puis un départ. Réservez en direct ici, ou sur <a href="#dispos">notre annonce Airbnb</a>.</p>
-      </header>
-      <div data-calendrier></div>
-    </div>
-  </section>
 
   <section id="reserver" class="book">
     <figure class="ph dusk" style="background:url(../img/guirlandes.jpg) center/cover"></figure>
@@ -285,7 +244,7 @@ footer .brand{color:var(--lin);font-size:30px}
       <p class="sub">Au printemps, l'été, en arrière-saison</p>
       <span class="rule"></span>
       <p>De mai à octobre, à la semaine, du samedi au samedi. Hors saison, en week-end de deux nuits minimum.</p>
-      <a class="btn" href="#dispos">Je réserve</a>
+      <a class="btn" href="mailto:contact@ker-avel.bzh">Nous écrire</a>
     </div>
   </section>
 </main>
@@ -297,51 +256,5 @@ footer .brand{color:var(--lin);font-size:30px}
     <div>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></div>
   </div>
 </footer>
-<script>
-(function(){
-  const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
-  const JOURS=["L","M","M","J","V","S","D"];
-  const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-  const fmt=d=>d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"long"});
-  const today=new Date();today.setHours(0,0,0,0);
-  const add=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
-  const booked=[[5,12],[19,23],[33,40],[47,54],[61,64],[75,89]].map(([a,b])=>[add(today,a),add(today,b)]);
-  const isBooked=d=>booked.some(([a,b])=>d>=a&&d<b);
-
-  document.querySelectorAll("[data-calendrier]").forEach(root=>{
-    let offset=0,arr=null,dep=null;
-    root.innerHTML=`<div class="cal-head"><button type="button" class="cal-nav" data-d="-1" aria-label="Mois précédents">‹</button><button type="button" class="cal-nav" data-d="1" aria-label="Mois suivants">›</button></div><div class="cal-months"></div><div class="cal-foot"><p class="cal-sum" aria-live="polite">Choisissez une date d'arrivée.</p><div class="cal-legend"><span><i class="lg free"></i>Libre</span><span><i class="lg busy"></i>Réservé</span><span><i class="lg sel"></i>Votre séjour</span></div><p class="cal-src">Synchronisé avec l'annonce Airbnb · dates d'exemple</p></div>`;
-    const months=root.querySelector(".cal-months"),sum=root.querySelector(".cal-sum");
-    root.querySelectorAll(".cal-nav").forEach(b=>b.addEventListener("click",()=>{offset=Math.max(0,offset+ +b.dataset.d);draw()}));
-    function rangeFree(a,b){for(let d=new Date(a);d<b;d=add(d,1))if(isBooked(d))return false;return true}
-    function draw(){
-      months.innerHTML="";
-      for(let m=0;m<2;m++){
-        const first=new Date(today.getFullYear(),today.getMonth()+offset+m,1);
-        const box=document.createElement("div");box.className="cal-month";
-        let h=`<h3 class="cal-title">${MOIS[first.getMonth()]} ${first.getFullYear()}</h3><div class="cal-grid">`+JOURS.map(j=>`<span class="cal-dow">${j}</span>`).join("");
-        const pad=(first.getDay()+6)%7;h+="<span></span>".repeat(pad);
-        const n=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();
-        for(let i=1;i<=n;i++){
-          const d=new Date(first.getFullYear(),first.getMonth(),i);
-          const past=d<today,busy=isBooked(d);
-          let cls="cal-day";if(past)cls+=" past";else if(busy)cls+=" busy";
-          if(arr&&+d===+arr)cls+=" sel edge";
-          if(arr&&dep&&d>arr&&d<=dep)cls+=" sel"+(+d===+dep?" edge":"");
-          h+=`<button type="button" class="${cls}" data-iso="${iso(d)}" ${past||busy?"disabled":""} aria-label="${fmt(d)}${busy?", réservé":""}">${i}</button>`;
-        }
-        box.innerHTML=h+"</div>";months.appendChild(box);
-      }
-      months.querySelectorAll(".cal-day:not([disabled])").forEach(b=>b.addEventListener("click",()=>pick(new Date(b.dataset.iso+"T00:00:00"))));
-    }
-    function pick(d){
-      if(!arr||dep||d<=arr){arr=d;dep=null;sum.textContent=`Arrivée ${fmt(d)}. Choisissez la date de départ.`}
-      else if(rangeFree(arr,d)){dep=d;const n=Math.round((dep-arr)/864e5);sum.textContent=`Du ${fmt(arr)} au ${fmt(dep)} · ${n} nuit${n>1?"s":""}. Ces dates sont libres.`}
-      else{sum.textContent="Une partie de ces dates est déjà réservée. Choisissez un autre départ."}
-      draw();
-    }
-    draw();
-  });
-})();</script>
 </body>
 </html>
