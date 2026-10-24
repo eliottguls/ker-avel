@@ -1,0 +1,6 @@
+# Les pages restent en noindex tant que EN_LIGNE = False dans outils/site.py.
+# À la mise en production, ce fichier doit être servi à la racine du nom de domaine.
+User-agent: *
+Allow: /
+
+Sitemap: https://eliottguls.github.io/ker-avel/sitemap.xml

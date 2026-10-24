@@ -207,3 +207,23 @@ footer.foot .in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minma
 .btns .btn.lin:hover,.btns .btn.lin:focus-visible{background:var(--encre);color:var(--blanc)}
 @media (max-width:900px){footer.foot .in{grid-template-columns:1fr 1fr}.plan{grid-column:1/-1}}
 @media (max-width:600px){footer.foot .in{grid-template-columns:1fr}}
+
+/* Photos en <img> (texte alternatif pour Google Images) */
+.ph>img,.saison>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.saison{position:relative;overflow:hidden}
+.saison figcaption{position:relative;z-index:1}
+
+/* Questions fréquentes : deux colonnes de cartouches lin, la réponse se déplie */
+.faq{text-align:center;padding-block:96px;background:var(--lin);color:var(--encre)}
+.faq h2{font-size:clamp(36px,4.4vw,60px);color:var(--ocre-fonce)}
+.faq .rule{color:var(--ocre)}
+.faq-liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:1080px;margin:0 auto;text-align:left;align-items:start}
+.faq details{background:var(--blanc);border-top:3px solid var(--ocre)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:20px 24px;font-size:17px;font-weight:600;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:26px;line-height:1;color:var(--ocre-fonce);transition:transform .2s ease-out}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--ocre-fonce);outline-offset:-2px}
+.faq details p{margin:0;padding:0 24px 22px;line-height:1.65}
+@media (max-width:767.98px){.faq{padding-block:64px}.faq-liste{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
