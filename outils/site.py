@@ -8,7 +8,10 @@ Contour : régions de France (github.com/gregoiredavid/france-geojson), simplifi
   structurées (schema.org), questions fréquentes entre <!--faq--> et <!--/faq-->,
   photos en <img> avec texte alternatif, robots.txt et sitemap.xml à la racine.
   EN_LIGNE = False garde toutes les pages en « noindex » tant que le site est en aperçu.
+- Feuilles de style et scripts appelés avec ?v=<empreinte> : le navigateur recharge
+  la nouvelle version dès qu'un fichier change, au lieu de garder l'ancienne en cache.
 """
+import hashlib
 import html as h
 import json
 import re
@@ -208,6 +211,17 @@ def plan_du_site():
         f"Sitemap: {DOMAINE}/sitemap.xml\n", encoding="utf-8")
 
 
+def versionner(f, html):
+    """Ajoute ?v=<empreinte du fichier> aux liens vers les .css et .js locaux."""
+    def rempl(m):
+        cible = (f.parent / m.group(2)).resolve()
+        if not cible.exists():
+            return m.group(0)
+        v = hashlib.md5(cible.read_bytes()).hexdigest()[:8]
+        return f'{m.group(1)}="{m.group(2)}?v={v}"'
+    return re.sub(r'\b(href|src)="((?!https?:)[^"?]+\.(?:css|js))(?:\?v=\w+)?"', rempl, html)
+
+
 def appliquer(html):
     html = re.sub(r'(<a\b[^>]*?\bdata-airbnb\b[^>]*?\bhref=")[^"]*(")', r"\g<1>" + AIRBNB + r"\2", html)
     html = re.sub(r'(<a\b[^>]*?\bhref=")[^"]*("[^>]*?\bdata-airbnb\b)', r"\g<1>" + AIRBNB + r"\2", html)
@@ -223,6 +237,7 @@ if __name__ == "__main__":
         chemin = str(f.relative_to(RACINE))
         if chemin.split("/")[0] in PISTES:
             n = referencement(chemin, en_img(n))
+        n = versionner(f, n)
         if n != s:
             f.write_text(n, encoding="utf-8")
             print(f.relative_to(RACINE))
