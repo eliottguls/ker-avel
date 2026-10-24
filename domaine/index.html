@@ -11,129 +11,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VacationRental","name":"Ker Avel","description":"Demeure de caractère avec parc, Bretagne","address":{"@type":"PostalAddress","addressLocality":"Saint-Coulomb","addressRegion":"Bretagne","addressCountry":"FR"},"containsPlace":{"@type":"Accommodation","numberOfBedrooms":5,"occupancy":{"@type":"QuantitativeValue","value":10}}}
 </script>
-<style>
-:root{
-  --nuit:#1a171b; --nuit2:#252126; --or:#bd9e56; --or-clair:#d6bd84; --or-texte:#8c6f34; --lin:#e8e3dc; --blanc:#ffffff; --encre:#1a171b;
-  --display:"Caladea", "Cambria", Georgia, serif;
-  --body:"Barlow", "DIN Alternate", "Helvetica Neue", Arial, sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-body{background:var(--blanc);color:var(--encre);font-family:var(--body);font-size:17px;line-height:1.6;margin:0;font-weight:300}
-.gut{padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
-.wrap{max-width:1240px;margin:0 auto}
-.tag{position:fixed;z-index:30;left:max(12px, env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--or);color:var(--nuit);font-size:12px;letter-spacing:.08em;padding:6px 12px;font-weight:500}
-.ph{position:relative;overflow:hidden;margin:0;max-width:100%}
-.ph figcaption{position:absolute;left:14px;bottom:12px;color:rgba(255,255,255,.88);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.5);z-index:1}
-
-.top{position:absolute;inset:0 0 auto;z-index:10;color:var(--blanc)}
-.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:22px}
-.top nav{display:flex;gap:24px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
-.top nav.r{justify-content:flex-end;align-items:center}
-.top a{color:inherit;text-decoration:none}
-.top nav a{min-height:44px;display:inline-flex;align-items:center}
-.top a:hover,.top a:focus-visible{color:var(--or-clair)}
-.logo{text-align:center;color:var(--blanc);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px}
-.logo svg{width:42px;height:34px}
-.logo span{font-family:var(--display);font-size:30px;letter-spacing:.12em;text-transform:uppercase;line-height:1}
-.logo small{font-size:12px;letter-spacing:.3em;text-transform:uppercase}
-.gold{background:var(--or);color:var(--nuit)!important;padding:10px 24px;font-weight:500;letter-spacing:.18em;justify-content:center;transition:background-color .15s ease-out}
-.gold:hover,.gold:focus-visible{background:var(--or-clair)}
-a:focus-visible{outline:2px solid var(--or);outline-offset:3px}
-
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;line-height:1.1}
-.sub{font-style:italic;font-weight:300;font-size:19px;letter-spacing:.02em;margin:10px 0 0}
-.more{display:inline-flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:inherit;text-decoration:none;margin-top:30px}
-.more::after{content:"";width:7px;height:7px;border:1px solid currentColor;border-radius:50%}
-
-.hero{height:min(100vh,940px);min-height:540px;display:flex;align-items:flex-end;justify-content:center;color:var(--blanc);text-align:center}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,27,.62) 0%,rgba(26,23,27,.12) 30%,transparent 55%,rgba(26,23,27,.55) 100%)}
-.hero .in{position:relative;padding-block:0 9vh}
-.hero h1{font-size:clamp(42px,6vw,82px)}
-.hero .sub{font-size:clamp(18px,1.8vw,23px)}
-
-.lin-band{background:var(--lin);height:70px;position:relative}
-.lin-band::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--or)}
-
-.intro{text-align:center;padding-block:100px 110px}
-.intro h2{font-size:clamp(34px,3.6vw,48px);color:var(--or-texte)}
-.intro p{max-width:62ch;margin:0 auto 1em}
-.intro .sub{margin-bottom:34px}
-.intro p.lead{text-align:center}
-
-.dark{background:var(--nuit);color:var(--lin);padding-block:110px;text-align:center}
-.dark h2{font-size:clamp(34px,3.6vw,48px);color:var(--or)}
-.dark .lead{max-width:62ch;margin:24px auto 64px;font-size:16px}
-.portraits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:center}
-.card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;color:var(--blanc);text-decoration:none;min-height:min(74vh,700px);padding-bottom:42px;overflow:hidden}
-.card.tall{min-height:min(82vh,780px)}
-.card > .ph{position:absolute;inset:0;transition:transform .3s ease-out}
-.card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,10,.62) 0%,transparent 45%)}
-.card .lbl{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
-.card .k{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:400}
-.card h3{font-size:clamp(30px,2.6vw,40px);margin-top:4px}
-.card .more{margin-top:10px}
-.card:hover > .ph,.card:focus-visible > .ph{transform:scale(1.04)}
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
-.duo .card{min-height:min(62vh,580px)}
-.dark .note{margin:60px auto 0;font-size:14px;letter-spacing:.06em}
-
-.full{position:relative;min-height:min(96vh,900px);display:flex;align-items:center;color:var(--blanc)}
-.full > .ph{position:absolute;inset:0}
-.full::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,23,27,.82) 0%,rgba(26,23,27,.45) 45%,transparent 75%);z-index:1}
-.full .wrap{position:relative;z-index:2;width:100%}
-.full .in{max-width:500px}
-.full h2{font-size:clamp(36px,4vw,56px)}
-.full p{margin:24px 0 0}
-
-.disc{padding-block:110px;text-align:center}
-.disc h2{font-size:clamp(34px,3.6vw,48px);color:var(--or-texte)}
-.panels{display:flex;height:min(64vh,560px);margin-top:56px;gap:2px}
-.panel{flex:1 1 0;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;background:var(--lin);color:var(--encre);transition:flex-grow .3s ease-out;overflow:hidden;min-width:0;border:0;font:inherit;cursor:pointer;padding:0 8px}
-.panel > .ph{position:absolute;inset:0;opacity:0;transition:opacity .3s ease-out}
-.panel svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.2;position:relative}
-.panel .t{position:relative;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;line-height:1.5}
-.panel .d{position:relative;display:none;max-width:30ch;font-size:16px;line-height:1.5}
-.panel.on{flex-grow:4;color:var(--blanc)}
-.panel.on > .ph{opacity:1}
-.panel.on::after{content:"";position:absolute;inset:0;background:rgba(26,23,27,.35)}
-.panel.on > *{z-index:1}
-.panel.on .d{display:block}
-.panel:focus-visible{outline:2px solid var(--or);outline-offset:-4px}
-
-
-.book{position:relative;min-height:min(80vh,720px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--blanc)}
-.book > .ph{position:absolute;inset:0}
-.book::before{content:"";position:absolute;inset:0;background:rgba(26,23,27,.55);z-index:1}
-.book .in{position:relative;z-index:2;max-width:560px;padding-block:90px}
-.book h2{font-size:clamp(38px,4.4vw,60px)}
-.book p{margin:22px 0 32px}
-.book .gold{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:12px;text-transform:uppercase}
-
-footer{background:var(--nuit);color:var(--lin);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-block:50px}
-footer small{font-size:12px}
-footer b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--or);letter-spacing:.1em;text-transform:uppercase;display:block}
-@media (max-width:900px){
-  .top .wrap{grid-template-columns:1fr auto}
-  .top nav.l{display:none}
-  .top nav.r a:not(.gold){display:none}
-  .logo{align-items:flex-start}
-  .logo svg{display:none}
-  .logo span{font-size:22px}
-  .portraits,.duo{grid-template-columns:1fr}
-  .card,.card.tall,.duo .card{min-height:72vh}
-  .panels{flex-direction:column;height:auto}
-  .panel{min-height:90px;flex:none}
-  .panel.on{min-height:360px}
-  .full::before{background:linear-gradient(0deg,rgba(26,23,27,.75) 0%,rgba(26,23,27,.2) 70%)}
-  .full{align-items:flex-end}
-  .full .in{padding-bottom:60px}
-}
-@media (prefers-reduced-motion:reduce){.card > .ph,.panel,.panel > .ph{transition:none}}
-@media (max-width:600px){footer .wrap{flex-direction:column;gap:18px}}
-h1,h2,h3,.sub,.hero p{text-wrap:balance}
-</style>
+<link rel="stylesheet" href="piste.css">
 <link rel="stylesheet" href="../assets/chartes.css">
 <script src="../assets/chartes.js"></script>
 </head>
@@ -142,12 +20,12 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
 
 <header class="top gut">
   <div class="wrap">
-    <nav class="l" aria-label="Navigation principale"><a href="#demeure">La demeure</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a></nav>
+    <nav class="l" aria-label="Navigation principale"><a href="#demeure"><span>La demeure</span><small>& son parc</small></a><a href="#chambres"><span>Chambres</span><small>cinq au total</small></a><a href="#alentours"><span>Alentours</span><small>la Côte d'Émeraude</small></a></nav>
     <a class="logo" href="#">
       <svg viewBox="0 0 42 34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 33h36M7 33V15L21 4l14 11v18M16 33v-9h10v9M11 18h4v4h-4zM27 18h4v4h-4zM21 4V1"/></svg>
       <span>Ker Avel</span><small>Demeure · Bretagne</small>
     </a>
-    <nav class="r" aria-label="Réservation"><a class="gold" href="#reserver">Réserver</a></nav>
+    <nav class="r" aria-label="Réservation"><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="#demeure">La demeure</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a href="#reserver">Réserver</a></div></details><a class="gold" href="#reserver">Réserver</a></nav>
   </div>
 </header>
 
@@ -176,13 +54,13 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
       <p class="sub">Cinq chambres, chacune son histoire</p>
       <p class="lead">Chaque chambre a sa salle de bain, son linge de lin lavé et une vue sur le parc ou sur la baie. La maison accueille jusqu'à dix personnes.</p>
       <div class="portraits">
-        <a class="card" href="#chambres"><figure class="ph room" style="background:url(../img/chambre-soleil.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 28 m²</span><h3>L'Armateur</h3><span class="more">Découvrir</span></span></a>
-        <a class="card tall" href="#chambres"><figure class="ph room2" style="background:url(../img/chambre-fenetres.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 24 m²</span><h3>La Capitainerie</h3><span class="more">Découvrir</span></span></a>
-        <a class="card" href="#chambres"><figure class="ph room3" style="background:url(../img/chambre-lucarne.jpg) center/cover"></figure><span class="lbl"><span class="k">Rez-de-jardin · 22 m²</span><h3>Les Hortensias</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="chambre-armateur.html"><figure class="ph room" style="background:url(../img/chambre-soleil.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 28 m²</span><h3>L'Armateur</h3><span class="more">Découvrir</span></span></a>
+        <a class="card tall" href="chambre-capitainerie.html"><figure class="ph room2" style="background:url(../img/chambre-fenetres.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue baie · 24 m²</span><h3>La Capitainerie</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="chambre-hortensias.html"><figure class="ph room3" style="background:url(../img/chambre-lucarne.jpg) center/cover"></figure><span class="lbl"><span class="k">Rez-de-jardin · 22 m²</span><h3>Les Hortensias</h3><span class="more">Découvrir</span></span></a>
       </div>
       <div class="duo">
-        <a class="card" href="#chambres"><figure class="ph room4" style="background:url(../img/chambre-sombre.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue parc · 18 m²</span><h3>La Lingerie</h3><span class="more">Découvrir</span></span></a>
-        <a class="card" href="#chambres"><figure class="ph room5" style="background:url(../img/chambre-claire.jpg) center/cover"></figure><span class="lbl"><span class="k">Quatre lits · 26 m²</span><h3>Les Mousses</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="chambre-lingerie.html"><figure class="ph room4" style="background:url(../img/chambre-sombre.jpg) center/cover"></figure><span class="lbl"><span class="k">Vue parc · 18 m²</span><h3>La Lingerie</h3><span class="more">Découvrir</span></span></a>
+        <a class="card" href="chambre-mousses.html"><figure class="ph room5" style="background:url(../img/chambre-claire.jpg) center/cover"></figure><span class="lbl"><span class="k">Quatre lits · 26 m²</span><h3>Les Mousses</h3><span class="more">Découvrir</span></span></a>
       </div>
     </div>
   </section>
@@ -195,6 +73,18 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
       <p>Les hortensias bordent l'allée, la pelouse descend vers la baie. On y prend le petit-déjeuner au soleil du matin, on y dîne aux lanternes en août.</p>
       <a class="more" href="#alentours">Les alentours</a>
     </div></div>
+  </section>
+
+  <section class="attentions gut" aria-labelledby="t-att">
+    <div class="wrap">
+      <h2 id="t-att">Les attentions de la maison</h2>
+      <p class="sub">Pour que vous n'ayez à penser qu'à la marée</p>
+      <div class="trio">
+        <article><figure class="cadre"><span class="ph" style="background:url(../img/table-jardin.jpg) center/cover"></span></figure><h3>Le petit-déjeuner</h3><p>Pain de la boulangerie de Saint-Coulomb, beurre salé, confitures maison et fruits du marché, servis au jardin ou dans votre chambre.</p><a class="ligne" href="mailto:contact@ker-avel.bzh?subject=Petit-d%C3%A9jeuner">Commander le petit-déjeuner</a></article>
+        <article><figure class="cadre"><span class="ph" style="background:url(../img/saint-malo.jpg) center/cover"></span></figure><h3>Nos adresses</h3><p>Les tables de Cancale, le bon horaire pour traverser vers le Guesclin, le loueur de voiliers : nous vous donnons nos adresses.</p><a class="ligne" href="mailto:contact@ker-avel.bzh?subject=Conseils">Demander nos conseils</a></article>
+        <article><figure class="cadre"><span class="ph" style="background:url(../img/chevet.jpg) center/cover"></span></figure><h3>Les petits plus</h3><p>Lits faits à l'arrivée, linge de lin, serviettes de plage, vélos et un panier de pique-nique pour la plage.</p><a class="ligne" href="#reserver">Voir les conditions</a></article>
+      </div>
+    </div>
   </section>
 
   <section id="alentours" class="disc gut" aria-labelledby="t-disc">
@@ -222,6 +112,7 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
     </div>
   </section>
 </main>
+<nav class="noms gut" aria-label="Les chambres"><div class="wrap"><a href="chambre-armateur.html">L'Armateur</a><a href="chambre-capitainerie.html">La Capitainerie</a><a href="chambre-hortensias.html">Les Hortensias</a><a href="chambre-lingerie.html">La Lingerie</a><a href="chambre-mousses.html">Les Mousses</a></div></nav>
 
 <footer class="gut"><div class="wrap"><span><b>Ker Avel</b>Pointe du Meinga · 35350 Saint-Coulomb</span><span>contact@ker-avel.bzh<br>+33 6 00 00 00 00<br><small>Photos d'illustration : Unsplash</small></span></div></footer>
 

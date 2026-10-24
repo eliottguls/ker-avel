@@ -11,121 +11,19 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VacationRental","name":"Ker Avel","description":"Maison de vacances face à la mer, Côte d'Émeraude, Bretagne","address":{"@type":"PostalAddress","addressLocality":"Saint-Coulomb","addressRegion":"Bretagne","addressCountry":"FR"},"containsPlace":{"@type":"Accommodation","numberOfBedrooms":5,"occupancy":{"@type":"QuantitativeValue","value":10}}}
 </script>
-<style>
-:root{
-  --ocre:#c19e60; --ocre-fonce:#8a6a35; --ardoise:#a3afb7; --lin:#edeae5; --blanc:#ffffff; --encre:#2f2e2e;
-  --display:"Federo", "Josefin Sans", "Futura", "Century Gothic", sans-serif;
-  --body:"Josefin Sans", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-body{background:var(--blanc);color:var(--encre);font-family:var(--body);font-weight:300;font-size:18px;line-height:1.6;margin:0}
-.gut{padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
-.tag{position:fixed;z-index:30;left:max(12px, env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--encre);color:var(--blanc);font-size:12px;letter-spacing:.08em;padding:6px 12px}
-.ph{position:relative;overflow:hidden;margin:0;max-width:100%}
-.ph figcaption{position:absolute;right:14px;bottom:12px;color:rgba(255,255,255,.9);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.45)}
-
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--blanc);border-bottom:1px solid var(--lin)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--blanc)}
-.top .in{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:14px}
-.brand{font-family:var(--display);font-size:28px;letter-spacing:.06em;line-height:1;text-transform:uppercase;color:var(--encre);text-decoration:none}
-.brand small{display:block;font-family:var(--body);font-size:12px;letter-spacing:.2em;margin-top:4px;text-align:center}
-.top nav{display:flex;align-items:center;gap:28px;font-family:var(--display);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
-.top nav a{color:var(--encre);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
-.top nav a:hover,.top nav a:focus-visible{color:var(--ocre-fonce)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:var(--ocre-fonce);color:var(--blanc);font-family:var(--display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:8px 24px;border:0;transition:background-color .15s ease-out}
-.btn:hover,.btn:focus-visible{background:var(--encre);color:var(--blanc)}
-.btn:focus-visible,.top nav a:focus-visible{outline:2px solid var(--encre);outline-offset:3px}
-.btn.lin{background:var(--lin);color:var(--encre)}
-.top nav .btn{color:var(--blanc)}
-
-h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance;margin:0;line-height:1.08}
-.sub{font-size:17px;letter-spacing:.06em;margin:16px 0 0;font-weight:400}
-.rule{display:block;width:34px;height:3px;background:currentColor;margin:26px auto}
-
-.band{height:22px;background:var(--ocre)}
-.hero{height:min(84vh,820px);min-height:440px;display:flex;align-items:flex-end;justify-content:center;color:var(--blanc);text-align:center}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,28,26,.55) 0%,rgba(30,28,26,.1) 55%,transparent 100%)}
-.hero .in{position:relative;padding-block:0 8vh}
-.hero h1{font-size:clamp(64px,12vw,170px);letter-spacing:.04em;text-shadow:0 2px 40px rgba(0,0,0,.25)}
-.hero .sub{font-size:clamp(16px,1.6vw,20px);text-shadow:0 1px 12px rgba(0,0,0,.35)}
-
-.split{display:grid;grid-template-columns:1fr 1fr;min-height:min(92vh,860px)}
-.split > .ph{min-height:100%}
-.split .txt{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:80px;min-width:0}
-.split .txt .inner{max-width:480px}
-.split.rev > .ph{order:2}
-.split h2,.split h3{font-size:clamp(40px,4.6vw,66px)}
-.split p{margin:0 0 1em}
-.split .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
-.c-lin{background:var(--lin);color:var(--encre)}
-.c-lin h3{color:var(--ocre-fonce)}
-.c-ocre{background:var(--ocre);color:var(--encre)}
-.c-ocre h2,.c-ocre h3{color:var(--encre)}
-.c-ardoise{background:var(--ardoise);color:var(--encre)}
-.c-ardoise h2,.c-ardoise h3{color:var(--encre)}
-.c-blanc{background:var(--blanc);color:var(--encre)}
-.c-blanc h2{color:var(--ocre-fonce)}
-.c-blanc .rule,.c-lin .rule{color:var(--ocre)}
-.c-ocre .rule,.c-ardoise .rule{color:var(--encre)}
-
-.facts{list-style:none;padding:0;margin:8px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:2px;font-size:15px;max-width:420px;text-align:center}
-.facts li{background:rgba(255,255,255,.55);padding:12px 8px;line-height:1.3}
-.facts b{display:block;font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.02em}
-
-.rooms-head{text-align:center;padding-block:100px 70px;background:var(--blanc)}
-.rooms-head h2{font-size:clamp(44px,6vw,84px);color:var(--ocre-fonce)}
-.rooms-head .rule{color:var(--ocre)}
-.rooms-head p{max-width:52ch;margin:0 auto}
-.room-meta{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
-
-.quote{background:var(--lin);text-align:center;padding-block:110px}
-.quote p{font-family:var(--display);font-size:clamp(28px,3.6vw,46px);line-height:1.2;text-transform:uppercase;max-width:24ch;margin:0 auto;color:var(--ocre-fonce)}
-.quote cite{display:block;margin-top:24px;font-style:normal;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
-
-.near{display:grid;grid-template-columns:repeat(3,1fr)}
-.near article{position:relative;min-height:min(78vh,720px);display:flex;align-items:flex-end;color:var(--blanc)}
-.near article > .ph{position:absolute;inset:0}
-.near .cap{position:relative;padding:34px 30px;background:linear-gradient(0deg,rgba(20,20,20,.55),transparent);width:100%}
-.near h3{font-size:clamp(30px,2.8vw,42px)}
-.near p{margin:6px 0 0;font-weight:400}
-
-
-.book{display:grid;grid-template-columns:1fr 1fr}
-.book > .ph{min-height:560px}
-.book .txt{background:var(--ardoise);color:var(--encre);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:80px;min-width:0}
-.book h2{font-size:clamp(40px,5vw,72px);color:var(--encre)}
-.book .rule{color:var(--encre)}
-.book p{max-width:40ch;margin:0 0 26px}
-
-footer.foot{background:var(--encre);color:var(--lin);font-size:15px}
-footer .in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-block:56px}
-footer .brand{color:var(--lin);font-size:30px}
-@media (max-width:900px){
-  .top nav a:not(.btn){display:none}
-  .split,.book{grid-template-columns:1fr;min-height:0}
-  .split > .ph,.book > .ph{min-height:68vh;order:0!important}
-  .near{grid-template-columns:1fr}
-  .near article{min-height:62vh}
-}
-@media (prefers-reduced-motion:no-preference){
-  .hero h1{animation:rise 1.2s ease-out both}
-  @keyframes rise{from{transform:translateY(16px)}to{transform:none}}
-}
-@media (max-width:600px){footer .in{flex-direction:column;gap:18px}}
-h1,h2,h3,.sub,.hero p{text-wrap:balance}
-</style>
+<link rel="stylesheet" href="piste.css">
 <link rel="stylesheet" href="../assets/chartes.css">
 <script src="../assets/chartes.js"></script>
 </head>
 <body>
 <a class="tag" href="../" style="text-decoration:none">← Les trois pistes</a>
+<p class="annonce gut">Prochaines disponibilités : la semaine du 7 novembre, puis les vacances de Noël. <a href="#reserver">Réserver une date</a></p>
 
 <header class="top gut">
   <div class="in">
     <a class="brand" href="#">Ker Avel<small>Saint-Coulomb</small></a>
     <nav aria-label="Navigation principale">
-      <a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a class="btn" href="#reserver">Réservez</a>
+      <a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><details class="menu"><summary>Menu</summary><div class="menu-liens"><a href="#maison">La maison</a><a href="#chambres">Chambres</a><a href="#alentours">Alentours</a><a href="#reserver">Réserver</a></div></details><a class="btn" href="#reserver">Réservez</a>
     </nav>
   </div>
 </header>
@@ -183,6 +81,7 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
         <span class="rule"></span>
         <p>Un balcon sur la baie, une baignoire face à la fenêtre et le phare du Grand Jardin dans l'axe du lit.</p>
         <ul class="room-meta"><li>Lit 180</li><li>28 m²</li><li>Vue mer</li></ul>
+        <div class="btns"><a class="btn" href="chambre-emeraude.html">Voir la chambre</a></div>
       </div></div>
     </article>
 
@@ -194,6 +93,7 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
         <span class="rule"></span>
         <p>Une porte-fenêtre ouvre sur les hortensias. Baignoire à pattes et douche à l'italienne.</p>
         <ul class="room-meta"><li>Lit 160</li><li>22 m²</li><li>Vue jardin</li></ul>
+        <div class="btns"><a class="btn" href="chambre-goemon.html">Voir la chambre</a></div>
       </div></div>
     </article>
 
@@ -205,8 +105,13 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
         <span class="rule"></span>
         <p>Quatre lits simples sous la charpente, des hublots sur la mer et une malle pleine de jeux de plage.</p>
         <ul class="room-meta"><li>4 lits 90</li><li>26 m²</li><li>Vue mer</li></ul>
+        <div class="btns"><a class="btn" href="chambre-mousses.html">Voir la chambre</a></div>
       </div></div>
     </article>
+    <div class="autres-grille deux">
+      <a class="autre" href="chambre-phare.html"><figure class="ph" style="background:url(../img/chambre-claire.jpg) center/cover"></figure><span class="cap"><h3>Le Phare</h3><span>Au bout du couloir, face au large</span></span></a>
+      <a class="autre" href="chambre-lingerie.html"><figure class="ph" style="background:url(../img/chambre-sombre.jpg) center/cover"></figure><span class="cap"><h3>La Lingerie</h3><span>Calme, côté pins</span></span></a>
+    </div>
   </section>
 
   <section class="quote gut">
@@ -232,8 +137,20 @@ h1,h2,h3,.sub,.hero p{text-wrap:balance}
   </section>
 
 
+  <section class="saisons gut" aria-labelledby="t-saisons">
+    <h2 id="t-saisons">Toute l'année</h2>
+    <p class="sub">La maison change avec les saisons</p>
+    <span class="rule"></span>
+  </section>
+  <div class="saisons-grille">
+    <figure class="saison" style="background-image:url(../img/landes.jpg)"><figcaption><b>Au printemps</b>Les ajoncs en fleur sur le sentier des douaniers</figcaption></figure>
+    <figure class="saison" style="background-image:url(../img/piscine-mer.jpg)"><figcaption><b>En été</b>La baignade à marée haute, au pied du jardin</figcaption></figure>
+    <figure class="saison" style="background-image:url(../img/estran.jpg)"><figcaption><b>À l'automne</b>Les grandes marées et la pêche à pied</figcaption></figure>
+    <figure class="saison" style="background-image:url(../img/guirlandes.jpg)"><figcaption><b>À Noël</b>La maison décorée et le feu dans la cheminée</figcaption></figure>
+  </div>
+
   <section id="reserver" class="book">
-    <figure class="ph dusk" style="background:url(../img/guirlandes.jpg) center/cover"></figure>
+    <figure class="ph dusk" style="background:url(../img/table-jardin.jpg) center/cover"></figure>
     <div class="txt gut">
       <h2>Réservez</h2>
       <p class="sub">Au printemps, l'été, en arrière-saison</p>
