@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ker Avel · Chartes graphiques</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Italiana&family=Karla:wght@400;500;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Mise en page : un bandeau plein écran par charte, chacun peint dans sa propre palette ;
+   dans chaque bandeau, une page d'accueil miniature puis les couleurs, les typos et les éléments. */
+:root{
+  --page:#1d1c1a; --page-fg:#efe9df; --page-muted:#bdb4a6; --page-line:#3a3733;
+  --ui:"Work Sans",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--page);color:var(--page-fg);font:16px/1.6 var(--ui);margin:0}
+.in{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+
+/* En-tête du document */
+.top{padding-block:72px 56px;border-bottom:1px solid var(--page-line)}
+.top .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--page-muted)}
+.top h1{font:400 clamp(40px,6vw,76px)/1.05 "Italiana",Georgia,serif;margin-top:14px;letter-spacing:.02em}
+.top .lead{max-width:62ch;margin-top:22px;color:var(--page-fg);font-size:17px}
+.sommaire{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px}
+.sommaire a{display:grid;grid-template-rows:56px auto;gap:10px;color:var(--page-fg);text-decoration:none;font-size:14px}
+.sommaire a:focus-visible{outline:2px solid var(--page-fg);outline-offset:4px}
+.sommaire .bar{display:flex}
+.sommaire .bar i{flex:1}
+.sommaire b{display:block;font-weight:600}
+.sommaire span{color:var(--page-muted)}
+
+/* Une charte */
+.charte{background:var(--fond);color:var(--texte);padding-block:80px 96px}
+.charte .entete{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px 64px;align-items:end;margin-bottom:48px}
+.charte .num{font:500 13px/1 var(--ui);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-txt)}
+.charte h2{font-family:var(--display);font-weight:var(--dw);font-size:clamp(38px,5vw,64px);line-height:1.04;margin-top:12px;letter-spacing:var(--dls);text-transform:var(--dtt)}
+.charte .ref{font-size:14px;margin-top:12px;opacity:.85}
+.charte .pitch{font-family:var(--body);font-size:18px;line-height:1.65;max-width:58ch}
+
+/* Accueil miniature */
+.maq{display:grid;grid-template-columns:1.1fr 1fr;min-height:440px;background:var(--panneau);color:var(--panneau-txt)}
+.maq .photo{background-size:cover;background-position:center;min-height:300px}
+.maq .txt{padding:44px clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:20px;justify-content:center}
+.maq .logo{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--logo-ls);text-transform:uppercase;font-size:15px}
+.maq .logo small{display:block;font-family:var(--body);letter-spacing:.12em;font-size:11px;opacity:.85;margin-top:4px;text-transform:uppercase}
+.maq h3{font-family:var(--display);font-weight:var(--dw);font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:var(--dls);text-transform:var(--dtt)}
+.maq p{font-family:var(--body);max-width:40ch}
+.maq.over{position:relative;grid-template-columns:1fr;min-height:480px;background:#000}
+.maq.over .photo{position:absolute;inset:0}
+.maq.over::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,15,18,.55),rgba(18,15,18,.15) 45%,rgba(18,15,18,.7))}
+.maq.over .txt{position:relative;z-index:1;align-items:center;text-align:center;color:#f4eee3;justify-content:space-between;padding-block:36px 48px}
+.maq.over h3{color:var(--accent-clair)}
+
+.btn{display:inline-block;align-self:flex-start;font:var(--btn-w) 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:16px 26px;background:var(--btn);color:var(--btn-txt);text-decoration:none;border:0;border-radius:var(--radius)}
+.btn.ligne{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.maq.over .btn{align-self:center}
+
+/* Détails de la charte */
+.details{display:grid;grid-template-columns:1.05fr 1fr 0.95fr;gap:48px;margin-top:56px}
+.details > *{min-width:0}
+.details h4{font:600 12px/1 var(--ui);letter-spacing:.18em;text-transform:uppercase;margin:0 0 18px;color:var(--accent-txt)}
+.nuancier{display:grid;gap:8px}
+.nu{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;align-items:center}
+.nu i{display:block;height:52px;box-shadow:inset 0 0 0 1px var(--trait)}
+.nu b{display:block;font-weight:600;font-size:15px}
+.nu span{font-size:13px;opacity:.85;font-variant-numeric:tabular-nums}
+
+.specimen .aa{font-family:var(--display);font-weight:var(--dw);font-size:96px;line-height:1;text-transform:none}
+.specimen .nom{font-size:14px;margin-top:6px}
+.specimen .titre{font-family:var(--display);font-weight:var(--dw);font-size:30px;line-height:1.1;margin-top:26px;letter-spacing:var(--dls);text-transform:var(--dtt)}
+.specimen .corps{font-family:var(--body);font-size:16px;margin-top:12px;max-width:42ch}
+.specimen .nom2{font-size:14px;margin-top:10px;opacity:.85}
+
+.chambre{margin:0;display:grid;gap:14px}
+.chambre .img{aspect-ratio:3/4;max-width:100%;background-size:cover;background-position:center}
+.chambre figcaption{font-family:var(--body)}
+.chambre figcaption b{display:block;font-family:var(--display);font-weight:var(--dw);font-size:24px;letter-spacing:var(--dls);text-transform:var(--dtt)}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+.regles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px;padding-top:28px;border-top:1px solid var(--trait);font-size:15px}
+.regles b{display:block;margin-bottom:4px}
+
+/* Liens vers les pistes */
+.essayer{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:36px;font-size:14px}
+.essayer span{font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.essayer a{color:inherit;text-decoration:none;padding:8px 14px;box-shadow:inset 0 0 0 1px var(--trait)}
+.essayer a:hover,.essayer a:focus-visible{box-shadow:inset 0 0 0 1px currentColor}
+.retour{color:var(--page-muted);text-decoration:none;font-size:14px}
+.retour:hover{color:var(--page-fg)}
+/* Comparatif */
+.compare{padding-block:80px 96px}
+.compare h2{font:400 clamp(32px,4vw,48px)/1.1 "Italiana",Georgia,serif}
+.compare .lead{color:var(--page-muted);margin-top:12px;max-width:60ch}
+.tab{overflow-x:auto;margin-top:32px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:15px}
+th,td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--page-line);vertical-align:top}
+th{font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--page-muted)}
+td:first-child{font-weight:600;white-space:nowrap}
+.note{margin-top:28px;color:var(--page-muted);font-size:14px;max-width:70ch}
+
+/* Charte 1 · Ocre & Ardoise */
+.c1{--fond:#edeae5;--texte:#2a2b2e;--accent-txt:#7d6230;--panneau:#c19e60;--panneau-txt:#2a2b2e;--btn:#2a2b2e;--btn-txt:#edeae5;--trait:rgba(42,43,46,.25);
+  --display:"Josefin Sans",Futura,sans-serif;--body:"Lora",Georgia,serif;--dw:300;--dls:.08em;--dtt:uppercase;--logo-ls:.32em;--btn-w:600;--radius:0}
+/* Charte 2 · Nuit & Or */
+.c2{--fond:#1a171b;--texte:#efe7d8;--accent-txt:#d4b978;--accent-clair:#e7d3a0;--panneau:#1a171b;--panneau-txt:#efe7d8;--btn:#bd9e56;--btn-txt:#1a171b;--trait:rgba(239,231,216,.22);
+  --display:"Cormorant Garamond",Garamond,serif;--body:"Jost",system-ui,sans-serif;--dw:500;--dls:.01em;--dtt:none;--logo-ls:.28em;--btn-w:500;--radius:0}
+.c2 .details h4,.c2 .num{color:#d4b978}
+.c2 .specimen .titre,.c2 .chambre figcaption b{color:#d4b978}
+/* Charte 3 · Granit rose */
+.c3{--fond:#f1e6df;--texte:#1f3347;--accent-txt:#9a5b49;--panneau:#1f3347;--panneau-txt:#f1e6df;--btn:#d9a594;--btn-txt:#1f3347;--trait:rgba(31,51,71,.22);
+  --display:"Italiana",Didot,serif;--body:"Karla",system-ui,sans-serif;--dw:400;--dls:.03em;--dtt:none;--logo-ls:.3em;--btn-w:700;--radius:0}
+.c3 .maq h3{color:#e8b9a9}
+/* Charte 4 · Lande & Bruyère */
+.c4{--fond:#2f3a2c;--texte:#ece5d8;--accent-txt:#d1ad73;--panneau:#ece5d8;--panneau-txt:#2f3a2c;--btn:#8b5a78;--btn-txt:#f6efe6;--trait:rgba(236,229,216,.24);
+  --display:"Bodoni Moda",Didot,serif;--body:"Work Sans",system-ui,sans-serif;--dw:500;--dls:0;--dtt:none;--logo-ls:.26em;--btn-w:600;--radius:2px}
+.c4 .maq h3{font-style:italic;color:#2f3a2c}
+.c4 .specimen .aa{font-style:italic}
+
+@media (max-width:900px){
+  .charte .entete,.details{grid-template-columns:1fr}
+  .maq{grid-template-columns:1fr}
+  .regles{grid-template-columns:1fr}
+  .sommaire{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chambre{max-width:420px}
+}
+@media (prefers-reduced-motion:no-preference){.sommaire a .bar{transition:transform .25s}.sommaire a:hover .bar{transform:translateY(-3px)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <p class="k"><a class="retour" href="../">← Ker Avel · les trois pistes</a></p>
+    <h1>Quatre chartes graphiques</h1>
+    <p class="lead">Chaque charte reprend ce que vous aimez chez Colette et au Domaine de Locguénolé : de grandes photos, des aplats de couleur francs, des titres qui ont du caractère. Aucune n'utilise de texte gris sur fond blanc ni de petites vignettes de chambres, ce qui donnait l'effet clinique du Château de Boisgelin. Les photos restent des illustrations.</p>
+    <nav class="sommaire" aria-label="Les chartes">
+      <a href="#ocre"><span class="bar"><i style="background:#edeae5"></i><i style="background:#c19e60"></i><i style="background:#a3afb7"></i><i style="background:#2a2b2e"></i></span><span><b>1 · Ocre & Ardoise</b>Lumineuse, Art déco</span></a>
+      <a href="#nuit"><span class="bar"><i style="background:#1a171b"></i><i style="background:#bd9e56"></i><i style="background:#e7d3a0"></i><i style="background:#efe7d8"></i></span><span><b>2 · Nuit & Or</b>Feutrée, hôtel de charme</span></a>
+      <a href="#granit"><span class="bar"><i style="background:#f1e6df"></i><i style="background:#d9a594"></i><i style="background:#1f3347"></i><i style="background:#9a5b49"></i></span><span><b>3 · Granit rose</b>Douce, côte et voile</span></a>
+      <a href="#lande"><span class="bar"><i style="background:#2f3a2c"></i><i style="background:#8b5a78"></i><i style="background:#d1ad73"></i><i style="background:#ece5d8"></i></span><span><b>4 · Lande & Bruyère</b>Profonde, campagne bretonne</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- 1 -->
+<section id="ocre" class="charte c1" aria-labelledby="t1">
+  <div class="in">
+    <div class="entete">
+      <div><p class="num">Charte 1</p><h2 id="t1">Ocre & Ardoise</h2><p class="ref">La plus proche de colette.bzh</p></div>
+      <p class="pitch">Le lin du sable mouillé, l'ocre des volets, le bleu-gris des toits d'ardoise. Les titres sont en capitales fines et espacées, comme sur une affiche de station balnéaire des années 30. Chaque bloc du site est moitié photo, moitié aplat de couleur.</p>
+    </div>
+    <div class="maq">
+      <div class="photo" style="background-image:url(../img/pointe.jpg)" role="img" aria-label="Pointe rocheuse et mer"></div>
+      <div class="txt">
+        <p class="logo">Ker Avel<small>Saint-Coulomb</small></p>
+        <h3>La maison face à la mer</h3>
+        <p>Dix couchages, un jardin qui descend vers la crique, Saint-Malo à quinze minutes.</p>
+        <a class="btn" href="#ocre">Je réserve</a>
+      </div>
+    </div>
+    <div class="details">
+      <div><h4>Couleurs</h4><div class="nuancier">
+        <div class="nu"><i style="background:#edeae5"></i><div><b>Lin</b><span>#EDEAE5 · fond des pages</span></div></div>
+        <div class="nu"><i style="background:#c19e60"></i><div><b>Ocre</b><span>#C19E60 · aplats, boutons sur lin</span></div></div>
+        <div class="nu"><i style="background:#a3afb7"></i><div><b>Ardoise</b><span>#A3AFB7 · second aplat</span></div></div>
+        <div class="nu"><i style="background:#2a2b2e"></i><div><b>Encre</b><span>#2A2B2E · tout le texte</span></div></div>
+        <div class="nu"><i style="background:#f7f5f1"></i><div><b>Écume</b><span>#F7F5F1 · texte sur photo</span></div></div>
+      </div></div>
+      <div class="specimen"><h4>Typographies</h4>
+        <p class="aa">Aa</p><p class="nom">Josefin Sans, capitales fines, pour les titres</p>
+        <p class="titre">Cinq chambres</p>
+        <p class="corps">Le matin, la lumière entre par les deux fenêtres côté baie. On entend la mer à marée haute.</p>
+        <p class="nom2">Lora pour les textes</p>
+      </div>
+      <figure class="chambre"><h4>Une chambre</h4>
+        <div class="img" style="background-image:url(../img/chambre-soleil.jpg)" role="img" aria-label="Chambre lumineuse"></div>
+        <figcaption><b>L'Armateur</b>Vue baie · 28 m² · lit 160</figcaption>
+        <div class="boutons"><a class="btn" href="#ocre">Réserver</a><a class="btn ligne" href="#ocre">Voir la chambre</a></div>
+      </figure>
+    </div>
+    <div class="regles">
+      <p><b>Photos</b>Toujours en pleine hauteur, jamais en vignette.</p>
+      <p><b>Aplats</b>On alterne lin, ocre et ardoise d'un bloc à l'autre.</p>
+      <p><b>Texte</b>Toujours en encre, jamais de gris clair.</p>
+    </div>
+    <nav class="essayer" aria-label="Essayer cette charte"><span>Voir sur le site</span><a href="../grand-large/?charte=ocre">A · Grand Large</a><a href="../domaine/?charte=ocre">B · Domaine</a><a href="../cire/?charte=ocre">C · Ciré</a></nav>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="nuit" class="charte c2" aria-labelledby="t2">
+  <div class="in">
+    <div class="entete">
+      <div><p class="num">Charte 2</p><h2 id="t2">Nuit & Or</h2><p class="ref">La plus proche de domaine-locguenole.com</p></div>
+      <p class="pitch">Un fond presque noir qui fait briller les photos, des titres en serif dorée, un logo centré sur une grande image. C'est l'esprit d'un hôtel de charme : calme, peu de mots, beaucoup d'espace.</p>
+    </div>
+    <div class="maq over">
+      <div class="photo" style="background-image:url(../img/manoir.jpg)" role="img" aria-label="Manoir dans son parc"></div>
+      <div class="txt">
+        <p class="logo">Ker Avel<small>Maison de famille · Saint-Coulomb</small></p>
+        <h3>Une demeure au bord de la Manche</h3>
+        <a class="btn" href="#nuit">Réserver</a>
+      </div>
+    </div>
+    <div class="details">
+      <div><h4>Couleurs</h4><div class="nuancier">
+        <div class="nu"><i style="background:#1a171b"></i><div><b>Nuit</b><span>#1A171B · fond des pages</span></div></div>
+        <div class="nu"><i style="background:#bd9e56"></i><div><b>Or</b><span>#BD9E56 · boutons, filets</span></div></div>
+        <div class="nu"><i style="background:#e7d3a0"></i><div><b>Or pâle</b><span>#E7D3A0 · titres sur photo</span></div></div>
+        <div class="nu"><i style="background:#efe7d8"></i><div><b>Ivoire</b><span>#EFE7D8 · texte courant</span></div></div>
+        <div class="nu"><i style="background:#5b5249"></i><div><b>Taupe</b><span>#5B5249 · séparateurs</span></div></div>
+      </div></div>
+      <div class="specimen"><h4>Typographies</h4>
+        <p class="aa">Aa</p><p class="nom">Cormorant Garamond pour les titres</p>
+        <p class="titre">Les chambres</p>
+        <p class="corps">Parquet ancien, draps de lin lavé, et la baie de Saint-Malo derrière les rideaux.</p>
+        <p class="nom2">Jost, fin et sobre, pour les textes</p>
+      </div>
+      <figure class="chambre"><h4>Une chambre</h4>
+        <div class="img" style="background-image:url(../img/chambre-sombre.jpg)" role="img" aria-label="Chambre aux tons sombres"></div>
+        <figcaption><b>La Capitainerie</b>Vue baie · 24 m² · lit 180</figcaption>
+        <div class="boutons"><a class="btn" href="#nuit">Réserver</a><a class="btn ligne" href="#nuit">Découvrir</a></div>
+      </figure>
+    </div>
+    <div class="regles">
+      <p><b>Photos</b>Grands portraits sur fond nuit, chacune avec son nom en doré.</p>
+      <p><b>Or</b>Réservé aux titres, filets et boutons. Jamais en paragraphe.</p>
+      <p><b>Rythme</b>Peu de texte, de grands espaces entre les blocs.</p>
+    </div>
+    <nav class="essayer" aria-label="Essayer cette charte"><span>Voir sur le site</span><a href="../grand-large/?charte=nuit">A · Grand Large</a><a href="../domaine/?charte=nuit">B · Domaine</a><a href="../cire/?charte=nuit">C · Ciré</a></nav>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="granit" class="charte c3" aria-labelledby="t3">
+  <div class="in">
+    <div class="entete">
+      <div><p class="num">Charte 3</p><h2 id="t3">Granit rose</h2><p class="ref">Les aplats de Colette, l'élégance de Locguénolé</p></div>
+      <p class="pitch">Le rose poudré des rochers de la côte, le bleu marine des cirés et des coques. Plus douce et plus lumineuse que les deux premières, avec une display fine et haute qui rappelle les affiches de régates.</p>
+    </div>
+    <div class="maq">
+      <div class="txt">
+        <p class="logo">Ker Avel<small>Saint-Coulomb</small></p>
+        <h3>Au coucher du soleil, les remparts virent au rose</h3>
+        <p>Une maison pour dix, à quinze minutes de Saint-Malo, la plage au bout du chemin.</p>
+        <a class="btn" href="#granit">Voir la maison</a>
+      </div>
+      <div class="photo" style="background-image:url(../img/saint-malo-couchant.jpg)" role="img" aria-label="Saint-Malo au couchant"></div>
+    </div>
+    <div class="details">
+      <div><h4>Couleurs</h4><div class="nuancier">
+        <div class="nu"><i style="background:#f1e6df"></i><div><b>Écume rosée</b><span>#F1E6DF · fond des pages</span></div></div>
+        <div class="nu"><i style="background:#d9a594"></i><div><b>Granit rose</b><span>#D9A594 · aplats, boutons</span></div></div>
+        <div class="nu"><i style="background:#1f3347"></i><div><b>Marine</b><span>#1F3347 · texte, blocs sombres</span></div></div>
+        <div class="nu"><i style="background:#9a5b49"></i><div><b>Brique</b><span>#9A5B49 · petits titres</span></div></div>
+        <div class="nu"><i style="background:#a8854f"></i><div><b>Laiton</b><span>#A8854F · détails, icônes</span></div></div>
+      </div></div>
+      <div class="specimen"><h4>Typographies</h4>
+        <p class="aa">Aa</p><p class="nom">Italiana pour les titres</p>
+        <p class="titre">Une journée à Ker Avel</p>
+        <p class="corps">Café sur la terrasse, pêche à pied à marée basse, huîtres à Cancale avant le dîner.</p>
+        <p class="nom2">Karla pour les textes</p>
+      </div>
+      <figure class="chambre"><h4>Une chambre</h4>
+        <div class="img" style="background-image:url(../img/chambre-fenetres.jpg)" role="img" aria-label="Chambre aux grandes fenêtres"></div>
+        <figcaption><b>Les Hortensias</b>Rez-de-jardin · 22 m² · deux lits</figcaption>
+        <div class="boutons"><a class="btn" href="#granit">Réserver</a><a class="btn ligne" href="#granit">Voir la chambre</a></div>
+      </figure>
+    </div>
+    <div class="regles">
+      <p><b>Photos</b>Plein écran ou moitié d'écran, chambres une par une.</p>
+      <p><b>Couleur</b>Le rose en grands aplats, le marine pour le texte.</p>
+      <p><b>Ton</b>Des textes courts, vivants, qui racontent une journée.</p>
+    </div>
+    <nav class="essayer" aria-label="Essayer cette charte"><span>Voir sur le site</span><a href="../grand-large/?charte=granit">A · Grand Large</a><a href="../domaine/?charte=granit">B · Domaine</a><a href="../cire/?charte=granit">C · Ciré</a></nav>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="lande" class="charte c4" aria-labelledby="t4">
+  <div class="in">
+    <div class="entete">
+      <div><p class="num">Charte 4</p><h2 id="t4">Lande & Bruyère</h2><p class="ref">Le luxe discret de Locguénolé, en version campagne</p></div>
+      <p class="pitch">Le vert sombre des landes et des pins, la bruyère violette en septembre, le laiton des vieilles poignées. Une Bodoni en italique donne le ton d'une maison de famille cossue, entre mer et bocage.</p>
+    </div>
+    <div class="maq">
+      <div class="photo" style="background-image:url(../img/landes.jpg)" role="img" aria-label="Landes bretonnes"></div>
+      <div class="txt">
+        <p class="logo">Ker Avel<small>Saint-Coulomb</small></p>
+        <h3>Entre la lande et la mer</h3>
+        <p>Un parc de deux hectares, des chambres sous les toits, le sentier des douaniers au fond du jardin.</p>
+        <a class="btn" href="#lande">Réserver un séjour</a>
+      </div>
+    </div>
+    <div class="details">
+      <div><h4>Couleurs</h4><div class="nuancier">
+        <div class="nu"><i style="background:#2f3a2c"></i><div><b>Lande</b><span>#2F3A2C · fond des pages</span></div></div>
+        <div class="nu"><i style="background:#ece5d8"></i><div><b>Lin</b><span>#ECE5D8 · texte, panneaux clairs</span></div></div>
+        <div class="nu"><i style="background:#8b5a78"></i><div><b>Bruyère</b><span>#8B5A78 · boutons</span></div></div>
+        <div class="nu"><i style="background:#d1ad73"></i><div><b>Laiton</b><span>#D1AD73 · petits titres</span></div></div>
+        <div class="nu"><i style="background:#7d8a6a"></i><div><b>Mousse</b><span>#7D8A6A · second aplat</span></div></div>
+      </div></div>
+      <div class="specimen"><h4>Typographies</h4>
+        <p class="aa">Aa</p><p class="nom">Bodoni Moda, en italique, pour les titres</p>
+        <p class="titre">Le parc</p>
+        <p class="corps">Les hortensias bleus longent l'allée jusqu'au portail. Le soir, on dîne sous les guirlandes.</p>
+        <p class="nom2">Work Sans pour les textes</p>
+      </div>
+      <figure class="chambre"><h4>Une chambre</h4>
+        <div class="img" style="background-image:url(../img/chambre-lucarne.jpg)" role="img" aria-label="Chambre sous les toits"></div>
+        <figcaption><b>La Lucarne</b>Sous les toits · 20 m² · lit 160</figcaption>
+        <div class="boutons"><a class="btn" href="#lande">Réserver</a><a class="btn ligne" href="#lande">Voir la chambre</a></div>
+      </figure>
+    </div>
+    <div class="regles">
+      <p><b>Photos</b>Grandes, chaudes, avec beaucoup de végétation.</p>
+      <p><b>Couleur</b>Fond lande, panneaux lin, bruyère seulement pour les boutons.</p>
+      <p><b>Titres</b>En italique, en minuscules, jamais en capitales.</p>
+    </div>
+    <nav class="essayer" aria-label="Essayer cette charte"><span>Voir sur le site</span><a href="../grand-large/?charte=lande">A · Grand Large</a><a href="../domaine/?charte=lande">B · Domaine</a><a href="../cire/?charte=lande">C · Ciré</a></nav>
+  </div>
+</section>
+
+<section class="compare" aria-labelledby="tc">
+  <div class="in">
+    <h2 id="tc">Pour choisir</h2>
+    <p class="lead">Les quatre chartes s'appliquent à chacune des trois pistes : utilisez les liens « Voir sur le site » ou le bouton en bas à droite de chaque piste.</p>
+    <div class="tab"><table>
+      <thead><tr><th>Charte</th><th>Ambiance</th><th>Fond</th><th>Titres</th><th>Idéale si la maison est…</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Ocre & Ardoise</td><td>Lumineuse, graphique</td><td>Clair (lin)</td><td>Capitales Art déco</td><td>Une villa balnéaire, claire, très ouverte sur la mer</td></tr>
+        <tr><td>2 · Nuit & Or</td><td>Feutrée, haut de gamme</td><td>Sombre (nuit)</td><td>Serif classique dorée</td><td>Un manoir ou une maison ancienne de caractère</td></tr>
+        <tr><td>3 · Granit rose</td><td>Douce, marine</td><td>Clair (écume rosée)</td><td>Display fine et haute</td><td>Une maison de bord de mer familiale et chaleureuse</td></tr>
+        <tr><td>4 · Lande & Bruyère</td><td>Profonde, campagne</td><td>Sombre (vert)</td><td>Bodoni en italique</td><td>Une longère ou une maison avec un grand parc</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Toutes les typographies sont gratuites (Google Fonts) et lisibles sur téléphone. Les couleurs de texte respectent un contraste suffisant sur leur fond, pour que tout reste lisible au soleil sur un mobile.</p>
+  </div>
+</section>
+</main>
+</body>
+</html>
