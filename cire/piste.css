@@ -243,7 +243,7 @@ footer .wrap{align-items:flex-start}
 @media (prefers-reduced-motion:reduce){.plan{transform:none}}
 
 /* Photos en <img> (texte alternatif pour Google Images) */
-.ph>img,.rond>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph>img,.rond>img,.tl-photos figure>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .rond{position:relative;overflow:hidden}
 
 /* Questions fréquentes : titre à gauche, fiches marine qui se déplient à droite */
