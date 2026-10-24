@@ -1,0 +1,70 @@
+/* Chartes graphiques applicables aux trois pistes.
+   html[data-page] est posé par chaque page, html[data-charte] par le sélecteur. */
+
+/* Typographies */
+html[data-charte="ocre"]{--display:"Josefin Sans",Futura,sans-serif;--body:"Lora",Georgia,serif}
+html[data-charte="nuit"]{--display:"Cormorant Garamond",Garamond,Georgia,serif;--body:"Jost","Helvetica Neue",Arial,sans-serif}
+html[data-charte="granit"]{--display:"Italiana",Didot,Georgia,serif;--body:"Karla","Helvetica Neue",Arial,sans-serif}
+html[data-charte="lande"]{--display:"Bodoni Moda",Didot,Georgia,serif;--body:"Work Sans","Helvetica Neue",Arial,sans-serif}
+html[data-charte="lande"] h1,html[data-charte="lande"] h2,html[data-charte="lande"] h3{font-style:italic}
+html[data-charte="ocre"] body{font-weight:400}
+
+/* Piste A · Grand Large */
+html[data-page="grand-large"][data-charte="ocre"]{--ocre:#c19e60;--ocre-fonce:#a9864a;--ardoise:#a3afb7;--lin:#edeae5;--blanc:#ffffff;--encre:#2a2b2e}
+html[data-page="grand-large"][data-charte="nuit"]{--ocre:#bd9e56;--ocre-fonce:#9c8243;--ardoise:#1a171b;--lin:#efe7d8;--blanc:#ffffff;--encre:#1a171b}
+html[data-page="grand-large"][data-charte="granit"]{--ocre:#d9a594;--ocre-fonce:#9a5b49;--ardoise:#1f3347;--lin:#f1e6df;--blanc:#ffffff;--encre:#1f3347}
+html[data-page="grand-large"][data-charte="lande"]{--ocre:#8b5a78;--ocre-fonce:#6f4660;--ardoise:#2f3a2c;--lin:#ece5d8;--blanc:#ffffff;--encre:#2f3a2c}
+html[data-page="grand-large"][data-charte="nuit"] .c-ardoise,
+html[data-page="grand-large"][data-charte="nuit"] .book .txt{color:#efe7d8}
+html[data-page="grand-large"][data-charte="nuit"] .c-ardoise h2,
+html[data-page="grand-large"][data-charte="nuit"] .c-ardoise h3,
+html[data-page="grand-large"][data-charte="nuit"] .book h2{color:#e7d3a0}
+html[data-page="grand-large"][data-charte="granit"] .c-ardoise,
+html[data-page="grand-large"][data-charte="granit"] .book .txt{color:#f1e6df}
+html[data-page="grand-large"][data-charte="granit"] .c-ocre h2,
+html[data-page="grand-large"][data-charte="granit"] .c-ocre h3{color:#1f3347}
+html[data-page="grand-large"][data-charte="granit"] .c-blanc h2,
+html[data-page="grand-large"][data-charte="granit"] .rooms-head h2{color:#9a5b49}
+html[data-page="grand-large"][data-charte="lande"] .c-ocre,
+html[data-page="grand-large"][data-charte="lande"] .c-ardoise,
+html[data-page="grand-large"][data-charte="lande"] .book .txt{color:#ece5d8}
+html[data-page="grand-large"][data-charte="lande"] .c-ardoise h2,
+html[data-page="grand-large"][data-charte="lande"] .c-ardoise h3,
+html[data-page="grand-large"][data-charte="lande"] .book h2{color:#d1ad73}
+
+/* Piste B · Domaine */
+html[data-page="domaine"][data-charte="ocre"]{--nuit:#2a2b2e;--nuit2:#3a3d42;--or:#c19e60;--or-clair:#d9bf8c;--lin:#edeae5;--blanc:#ffffff;--encre:#2a2b2e}
+html[data-page="domaine"][data-charte="nuit"]{--nuit:#1a171b;--nuit2:#252126;--or:#bd9e56;--or-clair:#e7d3a0;--lin:#efe7d8;--blanc:#ffffff;--encre:#1a171b}
+html[data-page="domaine"][data-charte="granit"]{--nuit:#1f3347;--nuit2:#2c4862;--or:#c98a76;--or-clair:#ecc4b6;--lin:#f1e6df;--blanc:#ffffff;--encre:#1f3347}
+html[data-page="domaine"][data-charte="lande"]{--nuit:#2f3a2c;--nuit2:#3d4a39;--or:#b38f55;--or-clair:#d1ad73;--lin:#ece5d8;--blanc:#ffffff;--encre:#2f3a2c}
+html[data-page="domaine"][data-charte="granit"] .intro h2,
+html[data-page="domaine"][data-charte="granit"] .disc h2{color:#9a5b49}
+html[data-page="domaine"][data-charte="lande"] .gold{background:#8b5a78}
+html[data-page="domaine"][data-charte="lande"] .gold:hover,
+html[data-page="domaine"][data-charte="lande"] .gold:focus-visible{background:#6f4660}
+
+/* Piste C · Ciré */
+html[data-page="cire"][data-charte="ocre"]{--sable:#edeae5;--sable2:#ddd6c9;--marine:#2a2b2e;--marine2:#5d6a73;--encre:#2a2b2e;--cire:#c19e60;--blanc:#ffffff}
+html[data-page="cire"][data-charte="nuit"]{--sable:#efe7d8;--sable2:#e0d4bd;--marine:#1a171b;--marine2:#5b5249;--encre:#1a171b;--cire:#bd9e56;--blanc:#ffffff}
+html[data-page="cire"][data-charte="granit"]{--sable:#f1e6df;--sable2:#e6d3c8;--marine:#1f3347;--marine2:#2c4862;--encre:#1f3347;--cire:#d9a594;--blanc:#ffffff}
+html[data-page="cire"][data-charte="lande"]{--sable:#ece5d8;--sable2:#ddd3c1;--marine:#2f3a2c;--marine2:#4a5a45;--encre:#2f3a2c;--cire:#d1ad73;--blanc:#ffffff}
+
+/* Sélecteur de charte */
+.ch-panel{position:fixed;z-index:40;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));font:400 14px/1.4 "Jost","Helvetica Neue",Arial,sans-serif;color:#efe9df;letter-spacing:0;text-transform:none;font-style:normal}
+.ch-toggle{display:flex;align-items:center;gap:10px;background:#1d1c1a;color:#efe9df;border:0;padding:10px 14px 10px 10px;font:inherit;font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.ch-toggle:focus-visible,.ch-opt:focus-visible,.ch-pages a:focus-visible{outline:2px solid #e7d3a0;outline-offset:2px}
+.ch-bar{display:flex;width:44px;height:18px}
+.ch-bar i{flex:1}
+.ch-box{position:absolute;right:0;bottom:calc(100% + 8px);width:min(320px,calc(100vw - 24px));background:#1d1c1a;padding:16px;display:grid;gap:14px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.ch-box[hidden]{display:none}
+.ch-box h2{font:500 11px/1 "Jost","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#bdb4a6;margin:0;font-style:normal}
+.ch-list{display:grid;gap:4px}
+.ch-opt{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;background:transparent;color:#efe9df;border:0;padding:8px;text-align:left;font:inherit;cursor:pointer}
+.ch-opt:hover{background:#2c2a27}
+.ch-opt[aria-pressed="true"]{background:#3a3733}
+.ch-opt b{display:block;font-weight:500}
+.ch-opt span span{color:#bdb4a6;font-size:13px}
+.ch-pages{display:flex;flex-wrap:wrap;gap:6px}
+.ch-pages a{color:#efe9df;text-decoration:none;font-size:13px;padding:6px 10px;box-shadow:inset 0 0 0 1px #4a4640}
+.ch-pages a[aria-current="page"]{background:#efe9df;color:#1d1c1a}
+@media print{.ch-panel{display:none}}
