@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;l
 .eyebrow{display:block;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;margin-bottom:18px}
 
 .hero{min-height:min(100vh,960px);display:flex;align-items:flex-end;color:var(--blanc)}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,30,42,.55) 0%,transparent 50%),linear-gradient(180deg,rgba(18,30,42,.35) 0%,transparent 20%)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,30,42,.55) 0%,transparent 50%),linear-gradient(180deg,rgba(18,30,42,.6) 0%,rgba(18,30,42,.25) 14%,transparent 28%)}
 .hero .wrap{position:relative;width:100%;padding-block:0 7vh}
 .hero h1{font-size:clamp(58px,11vw,170px);letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--cire)}
