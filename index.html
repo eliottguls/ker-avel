@@ -3,74 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ker Avel · Trois pistes</title>
+<title>Ker Avel, trois pistes pour le site</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Federo&family=Caladea&family=Gloock&family=Josefin+Sans:wght@300&family=Cormorant+Garamond:wght@500&family=Italiana&family=Bodoni+Moda:ital,wght@1,500&text=GrandLgeDomiC%C3%A9RNEOMI%C3%89%20&display=swap">
 <style>
-:root{--fond:#f4efe7;--encre:#1f2a33;--doux:#5b6168;--trait:#d9cfbf}
+/* Accueil de présentation : fond ardoise mouillée, les trois pistes en grandes photos.
+   Le nom de chaque piste est composé dans sa propre typo et suivi de sa palette ;
+   les deux changent avec la charte choisie, pour montrer ce que l'on va ouvrir. */
+:root{
+  --fond:#1e2b33; --texte:#ece6dc; --doux:#b9b3a8; --trait:rgba(236,230,220,.16);
+  --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--fond);color:var(--encre);font-family:"Jost","Helvetica Neue",Arial,sans-serif;font-weight:300;font-size:17px;line-height:1.65}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-header{padding:72px 0 48px;text-align:center}
-.kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--doux);margin:0 0 14px}
-h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(44px,7vw,76px);line-height:1;margin:0}
-.intro{max-width:620px;margin:22px auto 0;color:var(--doux)}
-.pistes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-bottom:72px}
-.piste{display:flex;flex-direction:column;color:inherit;text-decoration:none}
-.photo{aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden;position:relative}
-.photo span{position:absolute;inset:auto 0 0 0;padding:16px 20px;color:#fff;font-size:13px;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.45))}
-.piste h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:34px;margin:18px 0 4px;line-height:1.1}
-.piste p{margin:0;color:var(--doux);flex:1}
-.voir{margin-top:14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:2px}
-.piste:hover .voir,.piste:focus-visible .voir{color:#a9864a}
-.piste:hover .photo{filter:brightness(1.04)}
-.voir-chartes{margin:22px 0 0}
-.voir-chartes a{color:var(--encre);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
-.voir-chartes a:hover{color:#a9864a}
-.chartes{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:28px}
-.chartes button{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--trait);color:var(--encre);font:inherit;font-size:14px;padding:8px 14px;cursor:pointer}
-.chartes button i{display:block;width:36px;height:14px}
-.chartes button[aria-pressed="true"]{background:var(--encre);color:var(--fond);border-color:var(--encre)}
-.chartes button:focus-visible{outline:2px solid #a9864a;outline-offset:2px}
-footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;color:var(--doux);text-align:center}
-@media (max-width:900px){.pistes{grid-template-columns:1fr;gap:48px}.photo{aspect-ratio:4/3}header{padding:48px 0 36px}}
+body{margin:0;background:var(--fond);color:var(--texte);font-family:"Jost","Helvetica Neue",Arial,sans-serif;font-weight:300;font-size:17px;line-height:1.6}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--texte);outline-offset:4px}
+
+header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--space-6) var(--space-12);align-items:end;padding-block:var(--space-16) var(--space-8)}
+h1{font-weight:300;font-size:clamp(44px,6vw,72px);line-height:1.05;letter-spacing:.01em;margin:0}
+.intro{max-width:56ch;margin:var(--space-4) 0 0;color:var(--doux)}
+.lien-chartes{font-weight:400;text-decoration:underline;text-decoration-color:var(--trait);text-underline-offset:6px;display:inline-flex;align-items:center;min-height:44px;transition:text-decoration-color .15s ease-out}
+.lien-chartes:hover{text-decoration-color:var(--texte)}
+
+.choix{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);padding-block:var(--space-6);border-top:1px solid var(--trait)}
+.choix p{margin:0 var(--space-2) 0 0;font-weight:400}
+.chartes{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.chartes button{display:inline-flex;align-items:center;gap:var(--space-2);min-height:44px;background:transparent;border:1px solid var(--trait);color:var(--texte);font:inherit;font-size:15px;padding:0 var(--space-4);cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}
+.chartes button:hover{border-color:var(--doux)}
+.chartes button i{display:block;width:32px;height:12px;box-shadow:0 0 0 1px var(--trait)}
+.chartes button[aria-pressed="true"]{background:var(--texte);color:var(--fond);border-color:var(--texte);font-weight:400}
+.aide{flex-basis:100%;margin:0;font-size:14px;color:var(--doux)}
+
+.pistes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);padding-block:var(--space-8) var(--space-16)}
+.piste{display:flex;flex-direction:column;text-decoration:none}
+.photo{aspect-ratio:3/4;background-size:cover;background-position:center}
+.palette{display:flex;height:12px}
+.palette i{flex:1;background:var(--c)}
+.palette i:nth-child(1){--c:var(--c1)}.palette i:nth-child(2){--c:var(--c2)}.palette i:nth-child(3){--c:var(--c3)}.palette i:nth-child(4){--c:var(--c4)}
+.piste h2{font-family:var(--f);font-style:var(--fs,normal);font-weight:var(--fw,400);text-transform:var(--tt,none);letter-spacing:var(--ls,0);font-size:clamp(34px,3.2vw,44px);line-height:1.1;margin:var(--space-6) 0 var(--space-2)}
+.piste p{margin:0;color:var(--doux);flex:1;max-width:44ch}
+.voir{margin-top:var(--space-4);align-self:flex-start;font-weight:400;border-bottom:1px solid var(--trait);transition:border-color .15s ease-out}
+.piste:hover .voir,.piste:focus-visible .voir{border-color:var(--texte)}
+
+/* Typo et palette d'origine de chaque piste */
+.piste.a{--f:"Federo",sans-serif;--tt:uppercase;--ls:.04em;--c1:#edeae5;--c2:#c19e60;--c3:#a3afb7;--c4:#2f2e2e}
+.piste.b{--f:"Caladea",Georgia,serif;--c1:#1a171b;--c2:#bd9e56;--c3:#d6bd84;--c4:#e8e3dc}
+.piste.c{--f:"Gloock",Georgia,serif;--c1:#f4ede1;--c2:#1d3347;--c3:#e2ae2f;--c4:#284660}
+/* Chartes : même jeu de variables pour les trois pistes */
+body[data-charte="ocre"] .piste{--f:"Josefin Sans",sans-serif;--fw:300;--tt:uppercase;--ls:.08em;--fs:normal;--c1:#edeae5;--c2:#c19e60;--c3:#a3afb7;--c4:#2a2b2e}
+body[data-charte="nuit"] .piste{--f:"Cormorant Garamond",Georgia,serif;--fw:500;--tt:none;--ls:0;--fs:normal;--c1:#1a171b;--c2:#bd9e56;--c3:#e7d3a0;--c4:#efe7d8}
+body[data-charte="granit"] .piste{--f:"Italiana",Georgia,serif;--fw:400;--tt:none;--ls:.02em;--fs:normal;--c1:#f1e6df;--c2:#d9a594;--c3:#1f3347;--c4:#9a5b49}
+body[data-charte="lande"] .piste{--f:"Bodoni Moda",Georgia,serif;--fw:500;--tt:none;--ls:0;--fs:italic;--c1:#2f3a2c;--c2:#8b5a78;--c3:#d1ad73;--c4:#ece5d8}
+
+footer{border-top:1px solid var(--trait);padding-block:var(--space-6) var(--space-12);font-size:14px;color:var(--doux)}
+
+@media (max-width:767.98px){
+  header{grid-template-columns:1fr;gap:var(--space-2);padding-block:var(--space-8) var(--space-4)}
+  .choix{padding-block:var(--space-4)}
+  .chartes button{font-size:14px;padding:0 var(--space-3)}
+  .pistes{grid-template-columns:1fr;gap:var(--space-12)}
+  .photo{aspect-ratio:4/5}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <p class="kicker">Projet de site</p>
-    <h1>Ker Avel</h1>
-    <p class="intro">Trois directions pour le site de la maison. Chacune se parcourt comme un vrai site. Choisissez une charte graphique ci-dessous : elle s'applique à la piste que vous ouvrez, et vous pouvez en changer à tout moment avec le bouton en bas à droite. Les textes et les photos sont provisoires.</p>
-    <p class="voir-chartes"><a href="chartes/">Comparer les quatre chartes graphiques</a></p>
-    <div class="chartes" role="group" aria-label="Charte graphique">
+    <div>
+      <h1>Ker Avel</h1>
+      <p class="intro">Trois maquettes pour le site de la maison, à parcourir comme un vrai site. Les textes et les photos sont provisoires.</p>
+    </div>
+    <a class="lien-chartes" href="chartes/">Comparer les quatre chartes graphiques</a>
+  </header>
+  <div class="choix">
+    <p id="lbl-charte">Charte graphique</p>
+    <div class="chartes" role="group" aria-labelledby="lbl-charte">
       <button type="button" data-id="">Originale</button>
       <button type="button" data-id="ocre"><i style="background:linear-gradient(90deg,#edeae5 25%,#c19e60 25% 50%,#a3afb7 50% 75%,#2a2b2e 75%)"></i>Ocre &amp; Ardoise</button>
       <button type="button" data-id="nuit"><i style="background:linear-gradient(90deg,#1a171b 25%,#bd9e56 25% 50%,#e7d3a0 50% 75%,#efe7d8 75%)"></i>Nuit &amp; Or</button>
       <button type="button" data-id="granit"><i style="background:linear-gradient(90deg,#f1e6df 25%,#d9a594 25% 50%,#1f3347 50% 75%,#9a5b49 75%)"></i>Granit rose</button>
       <button type="button" data-id="lande"><i style="background:linear-gradient(90deg,#2f3a2c 25%,#8b5a78 25% 50%,#d1ad73 50% 75%,#ece5d8 75%)"></i>Lande &amp; Bruyère</button>
     </div>
-  </header>
+    <p class="aide">La charte choisie s'applique à la piste que vous ouvrez. Vous pourrez en changer à tout moment avec le bouton en bas à droite.</p>
+  </div>
   <main class="pistes">
-    <a class="piste" href="grand-large/">
-      <div class="photo" style="background-image:url(img/pointe.jpg)"><span>Piste A</span></div>
+    <a class="piste a" href="grand-large/">
+      <div class="photo" style="background-image:url(img/pointe.jpg)" role="img" aria-label="Maisons blanches sur la pointe, face à la mer"></div>
+      <div class="palette" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <h2>Grand Large</h2>
       <p>Lumineuse et graphique : aplats ocre et ardoise, capitales Art déco, grandes photos en moitié d'écran.</p>
-      <span class="voir">Voir la piste</span>
+      <span class="voir">Parcourir la piste A</span>
     </a>
-    <a class="piste" href="domaine/">
-      <div class="photo" style="background-image:url(img/manoir.jpg)"><span>Piste B</span></div>
+    <a class="piste b" href="domaine/">
+      <div class="photo" style="background-image:url(img/manoir.jpg)" role="img" aria-label="Manoir en pierre dans son parc"></div>
+      <div class="palette" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <h2>Domaine</h2>
       <p>Élégante et feutrée : fond anthracite, titres dorés, chambres présentées en grands portraits.</p>
-      <span class="voir">Voir la piste</span>
+      <span class="voir">Parcourir la piste B</span>
     </a>
-    <a class="piste" href="cire/">
-      <div class="photo" style="background-image:url(img/chaumiere.jpg)"><span>Piste C</span></div>
+    <a class="piste c" href="cire/">
+      <div class="photo" style="background-image:url(img/chaumiere.jpg)" role="img" aria-label="Chaumière fleurie d'hortensias"></div>
+      <div class="palette" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <h2>Ciré</h2>
       <p>Chaleureuse et familiale : sable, bleu marine et jaune ciré, une chambre à la fois en plein écran.</p>
-      <span class="voir">Voir la piste</span>
+      <span class="voir">Parcourir la piste C</span>
     </a>
   </main>
 </div>
@@ -81,6 +122,7 @@ footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;colo
   try{id=localStorage.getItem(CLE)||""}catch(e){}
   var boutons=document.querySelectorAll(".chartes button"),liens=document.querySelectorAll("a.piste");
   function maj(){
+    if(id)document.body.setAttribute("data-charte",id);else document.body.removeAttribute("data-charte");
     boutons.forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-id")===id?"true":"false")});
     liens.forEach(function(a){var base=a.getAttribute("href").split("?")[0];a.setAttribute("href",base+(id?"?charte="+id:""))});
   }
