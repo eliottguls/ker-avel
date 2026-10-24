@@ -56,7 +56,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;l
 .more::after{content:"";width:7px;height:7px;border:1px solid currentColor;border-radius:50%}
 
 .hero{height:min(100vh,940px);min-height:540px;display:flex;align-items:flex-end;justify-content:center;color:var(--blanc);text-align:center}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,27,.45) 0%,transparent 28%,transparent 60%,rgba(26,23,27,.5) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,27,.62) 0%,rgba(26,23,27,.12) 30%,transparent 55%,rgba(26,23,27,.55) 100%)}
 .hero .in{position:relative;padding-block:0 9vh}
 .hero h1{font-size:clamp(42px,6vw,82px)}
 .hero .sub{font-size:clamp(18px,1.8vw,23px)}
@@ -66,7 +66,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;l
 
 .intro{text-align:center;padding-block:100px 110px}
 .intro h2{font-size:clamp(34px,3.6vw,48px);color:var(--or)}
-.intro p{max-width:62ch;margin:0 auto 1em;text-align:left}
+.intro p{max-width:62ch;margin:0 auto 1em}
 .intro .sub{margin-bottom:34px}
 .intro p.lead{text-align:center}
 
@@ -89,7 +89,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;l
 
 .full{position:relative;min-height:min(96vh,900px);display:flex;align-items:center;color:var(--blanc)}
 .full > .ph{position:absolute;inset:0}
-.full::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,23,27,.7) 0%,rgba(26,23,27,.2) 55%,transparent 100%);z-index:1}
+.full::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,23,27,.82) 0%,rgba(26,23,27,.45) 45%,transparent 75%);z-index:1}
 .full .wrap{position:relative;z-index:2;width:100%}
 .full .in{max-width:500px}
 .full h2{font-size:clamp(36px,4vw,56px)}
@@ -139,6 +139,8 @@ footer b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--o
   .full .in{padding-bottom:60px}
 }
 @media (prefers-reduced-motion:reduce){.card > .ph,.panel,.panel > .ph{transition:none}}
+@media (max-width:600px){footer .wrap{flex-direction:column;gap:18px}}
+h1,h2,h3,.sub,.hero p{text-wrap:balance}
 </style>
 <link rel="stylesheet" href="../assets/chartes.css">
 <script src="../assets/chartes.js"></script>

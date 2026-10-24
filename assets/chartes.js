@@ -79,7 +79,8 @@
     var toggle = panel.querySelector(".ch-toggle");
 
     function maj() {
-      toggle.innerHTML = barre(actuelle.couleurs) + "<span>Charte : " + actuelle.nom + "</span>";
+      toggle.innerHTML = barre(actuelle.couleurs) + '<span class="ch-lbl">Charte : ' + actuelle.nom + "</span>";
+      toggle.setAttribute("aria-label", "Charte : " + actuelle.nom);
       panel.querySelectorAll(".ch-opt").forEach(function (b) {
         b.setAttribute("aria-pressed", b.getAttribute("data-id") === actuelle.id ? "true" : "false");
       });
