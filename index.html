@@ -26,6 +26,11 @@ h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clam
 .voir{margin-top:14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:2px}
 .piste:hover .voir,.piste:focus-visible .voir{color:#a9864a}
 .piste:hover .photo{filter:brightness(1.04)}
+.chartes{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:28px}
+.chartes button{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--trait);color:var(--encre);font:inherit;font-size:14px;padding:8px 14px;cursor:pointer}
+.chartes button i{display:block;width:36px;height:14px}
+.chartes button[aria-pressed="true"]{background:var(--encre);color:var(--fond);border-color:var(--encre)}
+.chartes button:focus-visible{outline:2px solid #a9864a;outline-offset:2px}
 footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;color:var(--doux);text-align:center}
 @media (max-width:900px){.pistes{grid-template-columns:1fr;gap:48px}.photo{aspect-ratio:4/3}header{padding:48px 0 36px}}
 </style>
@@ -35,7 +40,14 @@ footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;colo
   <header>
     <p class="kicker">Projet de site</p>
     <h1>Ker Avel</h1>
-    <p class="intro">Trois directions pour le site de la maison. Chacune se parcourt comme un vrai site. Les textes et les photos sont provisoires.</p>
+    <p class="intro">Trois directions pour le site de la maison. Chacune se parcourt comme un vrai site. Choisissez une charte graphique ci-dessous : elle s'applique à la piste que vous ouvrez, et vous pouvez en changer à tout moment avec le bouton en bas à droite. Les textes et les photos sont provisoires.</p>
+    <div class="chartes" role="group" aria-label="Charte graphique">
+      <button type="button" data-id="">Originale</button>
+      <button type="button" data-id="ocre"><i style="background:linear-gradient(90deg,#edeae5 25%,#c19e60 25% 50%,#a3afb7 50% 75%,#2a2b2e 75%)"></i>Ocre &amp; Ardoise</button>
+      <button type="button" data-id="nuit"><i style="background:linear-gradient(90deg,#1a171b 25%,#bd9e56 25% 50%,#e7d3a0 50% 75%,#efe7d8 75%)"></i>Nuit &amp; Or</button>
+      <button type="button" data-id="granit"><i style="background:linear-gradient(90deg,#f1e6df 25%,#d9a594 25% 50%,#1f3347 50% 75%,#9a5b49 75%)"></i>Granit rose</button>
+      <button type="button" data-id="lande"><i style="background:linear-gradient(90deg,#2f3a2c 25%,#8b5a78 25% 50%,#d1ad73 50% 75%,#ece5d8 75%)"></i>Lande &amp; Bruyère</button>
+    </div>
   </header>
   <main class="pistes">
     <a class="piste" href="grand-large/">
@@ -59,5 +71,18 @@ footer{border-top:1px solid var(--trait);padding:24px 0 40px;font-size:14px;colo
   </main>
 </div>
 <footer><div class="wrap">Photos d'illustration en attendant celles de la maison.</div></footer>
+<script>
+(function(){
+  var CLE="ker-avel-charte",id="";
+  try{id=localStorage.getItem(CLE)||""}catch(e){}
+  var boutons=document.querySelectorAll(".chartes button"),liens=document.querySelectorAll("a.piste");
+  function maj(){
+    boutons.forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-id")===id?"true":"false")});
+    liens.forEach(function(a){var base=a.getAttribute("href").split("?")[0];a.setAttribute("href",base+(id?"?charte="+id:""))});
+  }
+  boutons.forEach(function(b){b.addEventListener("click",function(){id=b.getAttribute("data-id");try{if(id)localStorage.setItem(CLE,id);else localStorage.removeItem(CLE)}catch(e){}maj()})});
+  maj();
+})();
+</script>
 </body>
 </html>
