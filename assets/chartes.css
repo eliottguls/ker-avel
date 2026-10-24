@@ -68,3 +68,4 @@ html[data-page="cire"][data-charte="lande"]{--sable:#ece5d8;--sable2:#ddd3c1;--m
 .ch-pages a{color:#efe9df;text-decoration:none;font-size:13px;padding:6px 10px;box-shadow:inset 0 0 0 1px #4a4640}
 .ch-pages a[aria-current="page"]{background:#efe9df;color:#1d1c1a}
 @media print{.ch-panel{display:none}}
+@media (max-width:600px){.ch-toggle{padding:10px}.ch-toggle .ch-lbl{display:none}}
