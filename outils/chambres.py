@@ -120,8 +120,8 @@ def img(nom):
 
 
 def tete(piste, c):
-    titre = f"{c['nom']}, chambre de Ker Avel"
-    desc = f"{c['nom']} : {c['sous'].lower()}. {c['lit']}, {c['surface']}, {c['vue'].lower()}. Chambre de Ker Avel, maison de vacances en Bretagne."
+    titre = f"Chambre {c['nom']} · Ker Avel, gîte en Bretagne"
+    desc = f"{c['nom']} : {c['sous'].lower()}. {c['lit']}, {c['surface']}, {c['vue'].lower()}. Une des cinq chambres de Ker Avel, gîte pour 10 personnes en Bretagne."
     return f"""<!doctype html>
 <html lang="fr" data-page="{piste}">
 <head>
@@ -129,6 +129,7 @@ def tete(piste, c):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(titre)}</title>
 <meta name="description" content="{e(desc)}">
+<!--seo--><!--/seo-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{POLICES[piste]}&display=swap">

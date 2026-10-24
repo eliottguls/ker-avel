@@ -241,3 +241,24 @@ footer .wrap{align-items:flex-start}
 .btn.lin:hover,.btn.lin:focus-visible{background:var(--blanc);color:var(--marine)}
 @media (max-width:900px){.plan{flex-basis:100%;transform:none}}
 @media (prefers-reduced-motion:reduce){.plan{transform:none}}
+
+/* Photos en <img> (texte alternatif pour Google Images) */
+.ph>img,.rond>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.rond{position:relative;overflow:hidden}
+
+/* Questions fréquentes : titre à gauche, fiches marine qui se déplient à droite */
+.faq{padding-block:110px;color:var(--encre)}
+.faq .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start}
+.faq .eyebrow{color:var(--marine2)}
+.faq h2{font-size:clamp(40px,4.6vw,68px);color:var(--marine)}
+.faq-liste{display:grid;gap:10px}
+.faq details{background:var(--blanc);border-left:6px solid var(--cire)}
+.faq details[open]{border-left-color:var(--marine)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:18px 22px;font-size:18px;font-weight:500;color:var(--marine)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--sable);font-size:20px;transition:transform .2s ease-out}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--marine);outline-offset:-2px}
+.faq details p{margin:0;padding:0 22px 22px;line-height:1.7}
+@media (max-width:900px){.faq{padding-block:80px}.faq .wrap{grid-template-columns:1fr;gap:28px}}
+@media (prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
